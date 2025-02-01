@@ -6,7 +6,8 @@ export default {
 	theme: {
 		extend: {
 			fontFamily: {
-				freightText: ['"freight-text-pro"', 'sans-serif']
+				freightText: ['"freight-text-pro"', 'sans-serif'],
+				proximaNova: ['"proxima-nova"', 'sans-serif']
 			}
 		}
 	},
