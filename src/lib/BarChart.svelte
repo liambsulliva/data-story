@@ -12,9 +12,9 @@
 		CupEquivalentPrice: number;
 	}
 
-	const { priceUnit = 'per pound', fruits = [] } = $props<{
-		priceUnit?: string;
+	const { fruits = [], form = '' } = $props<{
 		fruits: string[];
+		form?: string;
 	}>();
 	let chartContainer: HTMLElement;
 
@@ -31,7 +31,11 @@
 		// Load data based on props
 		const data = await loadData();
 		const filteredData = data
-			.filter((d) => d.RetailPriceUnit === priceUnit && fruits.includes(d.Fruit))
+			.filter((d) => {
+				const matchesFruit = fruits.includes(d.Fruit);
+				const matchesForm = form ? d.Form === form : true;
+				return matchesFruit && matchesForm;
+			})
 			.sort((a, b) => b.RetailPrice - a.RetailPrice);
 
 		const margin = { top: 20, right: 20, bottom: 60, left: 60 };
@@ -123,7 +127,7 @@
 
 	// Update chart on mount OR when props change
 	$effect(() => {
-		if (chartContainer && priceUnit && fruits.length > 0) {
+		if (chartContainer && form && fruits.length > 0) {
 			createChart();
 		}
 	});

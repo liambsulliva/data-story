@@ -63,7 +63,7 @@
 				<p class="py-6"></p>
 			</div>
 			<div>
-				<BarChart priceUnit="per pound" fruits={['Mangoes']} />
+				<BarChart form={'Fresh'} fruits={['Mangoes']} />
 			</div>
 		</div>
 	</section>
@@ -81,7 +81,7 @@
 				<p class="my-6"></p>
 			</div>
 			<div>
-				<BarChart priceUnit="per pound" fruits={['Mangoes']} />
+				<BarChart form={'Frozen'} fruits={['Mangoes']} />
 			</div>
 		</div>
 	</section>
@@ -99,7 +99,7 @@
 				<p class="my-6"></p>
 			</div>
 			<div>
-				<BarChart priceUnit="per pound" fruits={['Mangoes']} />
+				<BarChart form={'Canned'} fruits={['Mangoes']} />
 			</div>
 		</div>
 	</section>
