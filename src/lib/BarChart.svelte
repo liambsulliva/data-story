@@ -20,6 +20,7 @@
 	let chartContainer: HTMLElement;
 	let isTouchDevice =
 		typeof window !== 'undefined' && ('ontouchstart' in window || navigator.maxTouchPoints > 0);
+	let previousWidth = 0;
 
 	// Parse CSV
 	const loadData = async (): Promise<FruitData[]> => {
@@ -302,26 +303,30 @@
 	let resizeObserver: ResizeObserver;
 
 	$effect(() => {
-		let previousMobileLayout = window.innerWidth < 768;
-
-		const resizeHandler = debounce(() => {
-			const currentMobileLayout = window.innerWidth < 768;
-
-			if (currentMobileLayout !== previousMobileLayout) {
-				createChart();
-				previousMobileLayout = currentMobileLayout;
-			}
-		}, 250);
-
 		if (form && fruits.length > 0) {
 			createChart();
 
-			window.addEventListener('resize', resizeHandler);
+			if (!resizeObserver) {
+				resizeObserver = new ResizeObserver(
+					debounce((entries: ResizeObserverEntry[]) => {
+						const currentWidth = entries[0].contentRect.width;
 
-			return () => {
-				window.removeEventListener('resize', resizeHandler);
-			};
+						// Only re-render if width has meaningfully changed
+						if (Math.abs(currentWidth - previousWidth) > 10) {
+							createChart();
+							previousWidth = currentWidth;
+						}
+					}, 250)
+				);
+				resizeObserver.observe(chartContainer);
+			}
 		}
+
+		return () => {
+			if (resizeObserver) {
+				resizeObserver.disconnect();
+			}
+		};
 	});
 
 	function debounce(func: Function, wait: number) {

@@ -197,7 +197,7 @@
 	<section class="mt-36 lg:mx-8">
 		<div class="relative mx-6 mb-12 inline-flex items-center">
 			<h2 class="mr-4 text-center font-freightText text-5xl font-bold">Dried</h2>
-			<img src="/Grapes.svg" alt="Grapes" />
+			<img src="/Tomato.svg" alt="Tomatoes" />
 			<div class="absolute bottom-0 left-0 right-0">
 				<img src="/header-scribble.svg" alt="Underline" class="w-32" />
 			</div>
