@@ -22,42 +22,67 @@
 			<div class="absolute bottom-[4.75rem] left-12 right-12 h-[2px] bg-black"></div>
 		</div>
 	</div>
-	<section class="sm:mt-16 lg:mx-8">
-		<div class="flex flex-col justify-between gap-8 px-6 max-lg:items-center lg:flex-row">
-			<div>
-				<p class="font-proximaNova py-3 text-lg">
-					There has been a ton of chatter about the grocery prices as of late. Inflation ballooned
-					during the pandemic period, and despite the federal reserve’s best efforts, many are still
-					reeling from the higher prices that resulted from that period of high inflation.
-				</p>
-				<p class="font-proximaNova py-3 text-lg">
-					One of the major points that president-elect Donald Trump ran on in his 2024 campaign was
-					lowering the cost of grocery items. Namely, the <Link
-						href="https://www.newsweek.com/trump-promised-cheaper-eggscan-he-crack-it-2020449"
-						>cost of eggs</Link
-					>.
-				</p>
-				<p class="font-proximaNova py-3 text-lg">
-					But are groceries as expensive as people make them out to be? It depends. Let's break it
-					down, focussing specifically on the cost of different forms of fruit.
-				</p>
-			</div>
-			<div>
-				<div class="relative">
-					<div
-						class="text-md absolute -right-2.5 -top-2.5 z-10 border px-4 py-2 font-freightText text-lg font-bold shadow-[4px_4px_0px_#f0f0f0] max-lg:hidden"
-					>
-						Hover Me!
-						<div class="absolute -right-20 -top-12 w-24 rotate-12">
-							{@html EmphasisScribble}
+	<section class="sm:mt-8 lg:mx-8">
+		<div class="px-6">
+			<div class="flex flex-col items-center gap-16 lg:flex-row">
+				<div>
+					<p class="font-proximaNova py-3 text-lg">
+						There has been a ton of chatter about the grocery prices as of late. Inflation ballooned
+						during the pandemic period, and despite the federal reserve’s best efforts, many are
+						still reeling from the higher prices that resulted from that period of high inflation.
+					</p>
+					<p class="font-proximaNova py-3 text-lg">
+						One of the major points that president-elect Donald Trump ran on in his 2024 campaign
+						was lowering the cost of grocery items. Namely, the <Link
+							href="https://www.newsweek.com/trump-promised-cheaper-eggscan-he-crack-it-2020449"
+							>cost of eggs</Link
+						>.
+					</p>
+					<p class="font-proximaNova py-3 text-lg">
+						But are groceries as expensive as people make them out to be? It depends. Staple complex
+						carbohydrates like corn and wheat are grown domestically in the United States. <Link
+							href="https://en.wikipedia.org/wiki/Corn_syrup">Corn Syrup</Link
+						> is used in so many processed foods because of how cheap it is to manufacture. It doesn't
+						require any sort of foreign imports to make while being irresistably delicious. The domestic
+						availability factor is the reason we consistently reach out to the corn substance and not,
+						say, agave syrup.
+					</p>
+				</div>
+				<div>
+					<div class="relative">
+						<div
+							class="text-md absolute -right-2.5 -top-2.5 z-10 border px-4 py-2 font-freightText text-lg font-bold shadow-[4px_4px_0px_#f0f0f0] max-lg:hidden"
+						>
+							Hover Me!
+							<div class="absolute -right-20 -top-12 w-24 rotate-12">
+								{@html EmphasisScribble}
+							</div>
 						</div>
+						<InteractiveCollage svg1={Pomegranate} svg2={Peach} svg3={Grapes} />
 					</div>
-					<InteractiveCollage svg1={Pomegranate} svg2={Peach} svg3={Grapes} />
 				</div>
 			</div>
+			<p class="font-proximaNova py-3 text-lg">
+				Fruit is a little different though. Fruits are seasonally grown, can only grow in specific
+				environments, and need to be kept in specific conditions to remain fresh for the end
+				consumer. As such, there is a large degree of variability in how much certain fruits cost.
+			</p>
+			<p class="font-proximaNova py-3 text-lg">
+				This makes fruits act as a microcosm of the grocery market. Looking at the prices of fruits
+				can leave clues as to the economic viability of foreign imports from certain countries over
+				others. It can also reveal characteristics of the fruits themselves. Which are more likely
+				to spoil? Which are harder to grow?
+			</p>
+			<p class="font-proximaNova py-3 text-lg">
+				This write-up will explore these trends and help to demystify the sometimes massive
+				differences in how certain fruits are priced, relative to the rest of the market. It'll
+				tackle all of fruit's different marketable forms. Fresh, canned, juiced, nothing is off
+				limits.
+			</p>
+			<p class="font-proximaNova py-3 text-lg">Let's dive in.</p>
 		</div>
 	</section>
-	<section class="mt-12 lg:mx-8">
+	<section class="mt-32 lg:mx-8">
 		<div class="relative mx-6 mb-12 inline-flex items-center">
 			<h2 class="mr-2 text-center font-freightText text-5xl font-bold">Fresh</h2>
 			{@html Apple}
@@ -87,19 +112,26 @@
 			/>
 			<div class="my-8">
 				<p class="font-proximaNova mt-8 py-3 text-lg">
-					Raspberries ($7.73/lb) and Blueberries ($4.16/lb) are among the most expensive fruits when
-					bought fresh. This is in large part because they are both small berries. Berries are
-					almost always hand-picked, being very difficult to automate due to their variability in
-					time to ripen and their small size. Raspberries are especially bad, being both fragile and
-					extremely quick to spoil. Special care needs to be put into their harvest and transport to
-					ensure that they aren't crushed or spoiled by the time they reach the final buyer. This
-					explains their price nearly doubling that of the second most expensive fruit, cherries.
+					Looking at the full graph, there are a few trends that jump out immediately. For one,
+					small fruits like berries are far more likely to be expensive. Interestingly, tropical
+					fruits are generally the least expensive, despite the fact that they need to grow in very
+					specific environments.
 				</p>
-				<p class="font-proximaNova py-3 text-lg">
-					Strawberries ($2.97/lb) suffer from the berry problem, but are a little bigger and
-					tougher. Additionally, strawberries can grow in a variety of climates and soil types,
-					which gives growers much more flexibility in how they are grown. They have a longer
-					growing season, which helps to extend the supply window.
+			</div>
+			<BarChart
+				form={'Fresh'}
+				fruits={['Raspberries', 'Blueberries', 'Cherries', 'Strawberries']}
+			/>
+			<div class="my-8">
+				<p class="font-proximaNova mt-8 py-3 text-lg">
+					Raspberries ($7.73/lb) and Blueberries ($4.16/lb) are among the most expensive fruits when
+					bought fresh. This is in large part because they are both small, fragile berries. Berries
+					are almost always hand-picked, being very difficult to automate due to their variability
+					in time to ripen and their small size. Raspberries are especially bad, being one of the
+					most fragile fruits and extremely quick to spoil. Special care needs to be put into their
+					harvest and transport to ensure that they aren't crushed or spoiled by the time they reach
+					the final buyer. This explains their price nearly doubling that of the second most
+					expensive fruit, cherries.
 				</p>
 				<p class="font-proximaNova py-3 text-lg">
 					Cherries ($4.66/lb) also fall victim to the small fruit problem, and are difficult to
@@ -110,13 +142,23 @@
 						><sup>1</sup></Link
 					>
 				</p>
+				<p class="font-proximaNova py-3 text-lg">
+					Strawberries ($2.97/lb) suffer from the berry problem, but are a little bigger and
+					tougher. Additionally, strawberries can grow in a variety of climates and soil types,
+					which gives growers much more flexibility in how they are grown. They have a longer
+					growing season, which helps to extend their supply window.
+				</p>
 			</div>
-			<BarChart
-				form={'Fresh'}
-				fruits={['Mangoes', 'Bananas', 'Cantaloupe', 'Pineapple', 'Watermelon']}
-			/>
+			<BarChart form={'Fresh'} fruits={['Mangoes', 'Bananas', 'Pineapple', 'Watermelon']} />
 			<div class="my-8">
-				<p class="font-proximaNova py-3 text-lg">Looking at some of the</p>
+				<p class="font-proximaNova py-3 text-lg">
+					Narrowing in on the tropical fruits reveals that Mangoes ($1.47/lb) are easily the most
+					expensive, easily doubling the price of Pineapples ($0.62/lb) and Bananas ($0.60/lb).
+					Considering that they all grow in similar climates, this doesn't make much sense at first.
+					However, mangoes are heavier than bananas without having the rugged exterior that
+					pineapples and watermelon do. They need to be specially packaged to ensure that they both
+					won't smash other fruits and won't get smashed themselves.
+				</p>
 			</div>
 		</div>
 	</section>
