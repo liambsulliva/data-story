@@ -302,24 +302,26 @@
 	let resizeObserver: ResizeObserver;
 
 	$effect(() => {
-		if (chartContainer && form && fruits.length > 0) {
+		let previousMobileLayout = window.innerWidth < 768;
+
+		const resizeHandler = debounce(() => {
+			const currentMobileLayout = window.innerWidth < 768;
+
+			if (currentMobileLayout !== previousMobileLayout) {
+				createChart();
+				previousMobileLayout = currentMobileLayout;
+			}
+		}, 250);
+
+		if (form && fruits.length > 0) {
 			createChart();
 
-			if (!resizeObserver) {
-				resizeObserver = new ResizeObserver(
-					debounce(() => {
-						createChart();
-					}, 250)
-				);
-				resizeObserver.observe(chartContainer);
-			}
-		}
+			window.addEventListener('resize', resizeHandler);
 
-		return () => {
-			if (resizeObserver) {
-				resizeObserver.disconnect();
-			}
-		};
+			return () => {
+				window.removeEventListener('resize', resizeHandler);
+			};
+		}
 	});
 
 	function debounce(func: Function, wait: number) {

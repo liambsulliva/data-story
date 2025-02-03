@@ -2,9 +2,6 @@
 	import BarChart from '$lib/BarChart.svelte';
 	import InteractiveCollage from '$lib/InteractiveCollage.svelte';
 	import Link from '$lib/Link.svelte';
-	import Grapes from '/src/assets/Grapes.svg?raw';
-	import Pomegranate from '/src/assets/Pomegranate.svg?raw';
-	import Peach from '/src/assets/Peach.svg?raw';
 </script>
 
 <main class="mx-auto w-full max-w-[1200px]">
@@ -21,19 +18,19 @@
 		<div class="px-6">
 			<div class="flex flex-col items-center gap-16 lg:flex-row">
 				<div>
-					<p class="font-proximaNova py-3 text-lg">
+					<p class="py-3 font-proximaNova text-lg">
 						There has been a ton of chatter about the grocery prices as of late. Inflation ballooned
 						during the pandemic period, and despite the federal reserve’s best efforts, many are
 						still reeling from the higher prices that resulted from that period of high inflation.
 					</p>
-					<p class="font-proximaNova py-3 text-lg">
+					<p class="py-3 font-proximaNova text-lg">
 						One of the major points that president-elect Donald Trump ran on in his 2024 campaign
 						was lowering the cost of grocery items. Namely, the <Link
 							href="https://www.newsweek.com/trump-promised-cheaper-eggscan-he-crack-it-2020449"
 							>cost of eggs</Link
 						>.
 					</p>
-					<p class="font-proximaNova py-3 text-lg">
+					<p class="py-3 font-proximaNova text-lg">
 						But are groceries as expensive as people make them out to be? It depends. Staple complex
 						carbohydrates like corn and wheat are grown domestically in the United States. <Link
 							href="https://en.wikipedia.org/wiki/Corn_syrup">Corn Syrup</Link
@@ -53,28 +50,28 @@
 								<img src="/emphasis-scribble.svg" alt="Emphasis Scribble" />
 							</div>
 						</div>
-						<InteractiveCollage svg1={Pomegranate} svg2={Peach} svg3={Grapes} />
+						<InteractiveCollage />
 					</div>
 				</div>
 			</div>
-			<p class="font-proximaNova py-3 text-lg">
+			<p class="py-3 font-proximaNova text-lg">
 				Fruit is a little different though. Fruits are seasonally grown, can only grow in specific
 				environments, and need to be kept in specific conditions to remain fresh for the end
 				consumer. As such, there is a large degree of variability in how much certain fruits cost.
 			</p>
-			<p class="font-proximaNova py-3 text-lg">
+			<p class="py-3 font-proximaNova text-lg">
 				This makes fruits act as a microcosm of the grocery market. Looking at the prices of fruits
 				can leave clues as to the economic viability of foreign imports from certain countries over
 				others. It can also reveal characteristics of the fruits themselves. Which are more likely
 				to spoil? Which are harder to grow?
 			</p>
-			<p class="font-proximaNova py-3 text-lg">
+			<p class="py-3 font-proximaNova text-lg">
 				This write-up will explore these trends and help to demystify the sometimes massive
 				differences in how certain fruits are priced, relative to the rest of the market. It'll
 				tackle all of fruit's different marketable forms. Fresh, canned, juiced, nothing is off
 				limits.
 			</p>
-			<p class="font-proximaNova py-3 text-lg">Let's dive in.</p>
+			<p class="py-3 font-proximaNova text-lg">Let's dive in.</p>
 		</div>
 	</section>
 	<section class="mt-32 lg:mx-8">
@@ -106,7 +103,7 @@
 				]}
 			/>
 			<div class="my-8">
-				<p class="font-proximaNova mt-8 py-3 text-lg">
+				<p class="mt-8 py-3 font-proximaNova text-lg">
 					Looking at the full graph, there are a few trends that jump out immediately. For one,
 					small fruits like berries are far more likely to be expensive. Interestingly, tropical
 					fruits are generally the least expensive, despite the fact that they need to grow in very
@@ -118,7 +115,7 @@
 				fruits={['Raspberries', 'Blueberries', 'Cherries', 'Strawberries']}
 			/>
 			<div class="my-8">
-				<p class="font-proximaNova mt-8 py-3 text-lg">
+				<p class="mt-8 py-3 font-proximaNova text-lg">
 					Raspberries ($7.73/lb) and Blueberries ($4.16/lb) are among the most expensive fruits when
 					bought fresh. This is in large part because they are both small, fragile berries. Berries
 					are almost always hand-picked, being very difficult to automate due to their variability
@@ -128,7 +125,7 @@
 					the final buyer. This explains their price nearly doubling that of the second most
 					expensive fruit, cherries.
 				</p>
-				<p class="font-proximaNova py-3 text-lg">
+				<p class="py-3 font-proximaNova text-lg">
 					Cherries ($4.66/lb) also fall victim to the small fruit problem, and are difficult to
 					automate because of that fact. They're hard to grow well, being grown mainly in a 4 month
 					period between late spring and early summer in California, Oregon, and Washington. They
@@ -137,7 +134,7 @@
 						><sup>1</sup></Link
 					>
 				</p>
-				<p class="font-proximaNova py-3 text-lg">
+				<p class="py-3 font-proximaNova text-lg">
 					Strawberries ($2.97/lb) suffer from the berry problem, but are a little bigger and
 					tougher. Additionally, strawberries can grow in a variety of climates and soil types,
 					which gives growers much more flexibility in how they are grown. They have a longer
@@ -146,7 +143,7 @@
 			</div>
 			<BarChart form={'Fresh'} fruits={['Mangoes', 'Bananas', 'Pineapple', 'Watermelon']} />
 			<div class="my-8">
-				<p class="font-proximaNova py-3 text-lg">
+				<p class="py-3 font-proximaNova text-lg">
 					Narrowing in on the tropical fruits reveals that Mangoes ($1.47/lb) are easily the most
 					expensive, easily doubling the price of Pineapples ($0.62/lb) and Bananas ($0.60/lb).
 					Considering that they all grow in similar climates, this doesn't make much sense at first.
@@ -167,9 +164,9 @@
 		</div>
 		<div class="mx-6">
 			<BarChart form={'Frozen'} fruits={['Blueberries', 'Raspberries', 'Strawberries']} />
-			<p class="font-proximaNova mt-8 py-3 text-lg"></p>
-			<p class="font-proximaNova py-3 text-lg"></p>
-			<p class="font-proximaNova py-3"></p>
+			<p class="mt-8 py-3 font-proximaNova text-lg"></p>
+			<p class="py-3 font-proximaNova text-lg"></p>
+			<p class="py-3 font-proximaNova"></p>
 		</div>
 	</section>
 	<section class="mt-36 lg:mx-8">
@@ -192,9 +189,9 @@
 					'Pineapple, packed in syrup or water'
 				]}
 			/>
-			<p class="font-proximaNova mt-8 py-3 text-lg"></p>
-			<p class="font-proximaNova py-3 text-lg"></p>
-			<p class="font-proximaNova py-3"></p>
+			<p class="mt-8 py-3 font-proximaNova text-lg"></p>
+			<p class="py-3 font-proximaNova text-lg"></p>
+			<p class="py-3 font-proximaNova"></p>
 		</div>
 	</section>
 	<section class="mt-36 lg:mx-8">
@@ -220,9 +217,9 @@
 					'Papaya'
 				]}
 			/>
-			<p class="font-proximaNova mt-8 py-3 text-lg"></p>
-			<p class="font-proximaNova py-3 text-lg"></p>
-			<p class="font-proximaNova py-3"></p>
+			<p class="mt-8 py-3 font-proximaNova text-lg"></p>
+			<p class="py-3 font-proximaNova text-lg"></p>
+			<p class="py-3 font-proximaNova"></p>
 		</div>
 	</section>
 	<section class="mt-36 lg:mx-8">
@@ -245,9 +242,9 @@
 					'Pomegranate, ready-to-drink'
 				]}
 			/>
-			<p class="font-proximaNova mt-8 py-3 text-lg"></p>
-			<p class="font-proximaNova py-3 text-lg"></p>
-			<p class="font-proximaNova py-3"></p>
+			<p class="mt-8 py-3 font-proximaNova text-lg"></p>
+			<p class="py-3 font-proximaNova text-lg"></p>
+			<p class="py-3 font-proximaNova"></p>
 		</div>
 	</section>
 </main>

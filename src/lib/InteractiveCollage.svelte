@@ -7,9 +7,6 @@
 		y: number;
 	}
 
-	export let svg1: string;
-	export let svg2: string;
-	export let svg3: string;
 	export let size: number = 300;
 
 	// Default positions
@@ -70,7 +67,7 @@
 		on:mousemove={(e) => handleMouseMove(e, pos1, defaults.svg1)}
 		on:mouseleave={() => handleMouseLeave(pos1, defaults.svg1)}
 	>
-		{@html svg1}
+		<img src="/Pomegranate.svg" alt="Pomegranate" />
 	</div>
 	<div
 		class="svg-container"
@@ -82,7 +79,7 @@
 		on:mousemove={(e) => handleMouseMove(e, pos2, defaults.svg2)}
 		on:mouseleave={() => handleMouseLeave(pos2, defaults.svg2)}
 	>
-		{@html svg2}
+		<img src="/Peach.svg" alt="Peach" />
 	</div>
 	<div
 		class="svg-container"
@@ -94,7 +91,7 @@
 		on:mousemove={(e) => handleMouseMove(e, pos3, defaults.svg3)}
 		on:mouseleave={() => handleMouseLeave(pos3, defaults.svg3)}
 	>
-		{@html svg3}
+		<img src="/Grapes.svg" alt="Grapes" />
 	</div>
 </div>
 
