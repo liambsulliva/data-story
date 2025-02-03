@@ -17,7 +17,6 @@
 	};
 
 	// Spring stores for each SVG's position
-	// TODO: Use updated Spring object in @svelte/motion
 	const pos1 = spring<Position>(defaults.svg1, {
 		stiffness: 0.1,
 		damping: 0.6
@@ -30,6 +29,11 @@
 		stiffness: 0.1,
 		damping: 0.6
 	});
+
+	let isDragging = false;
+	let startX: number, startY: number;
+	let currentPos: typeof pos1;
+	let currentDefault: Position;
 
 	function handleMouseMove(event: MouseEvent, pos: typeof pos1, defaultPos: Position) {
 		const container = event.currentTarget as HTMLDivElement;
@@ -54,42 +58,95 @@
 	function handleMouseLeave(pos: typeof pos1, defaultPos: Position) {
 		pos.set({ ...defaultPos });
 	}
+
+	function handleTouchStart(event: TouchEvent, pos: typeof pos1, defaultPos: Position) {
+		isDragging = true;
+		currentPos = pos;
+		currentDefault = defaultPos;
+
+		const touch = event.touches[0];
+		const container = event.currentTarget as HTMLDivElement;
+		const rect = container.getBoundingClientRect();
+
+		startX = touch.clientX - rect.left;
+		startY = touch.clientY - rect.top;
+	}
+
+	function handleTouchMove(event: TouchEvent) {
+		if (!isDragging) return;
+
+		const touch = event.touches[0];
+		const container = event.currentTarget as HTMLDivElement;
+		const rect = container.getBoundingClientRect();
+
+		const touchX = touch.clientX - rect.left;
+		const touchY = touch.clientY - rect.top;
+
+		const centerX = rect.width / 2;
+		const centerY = rect.height / 2;
+
+		const deltaX = (touchX - startX) / 10;
+		const deltaY = (touchY - startY) / 10;
+
+		currentPos.set({
+			x: currentDefault.x + deltaX,
+			y: currentDefault.y + deltaY
+		});
+	}
+
+	function handleTouchEnd() {
+		if (isDragging) {
+			isDragging = false;
+			currentPos.set({ ...currentDefault });
+		}
+	}
 </script>
 
-<div class="collage-container">
+<div class="collage-container" on:touchmove|preventDefault>
 	<div
 		class="svg-container"
 		style="
-                transform: translate({$pos1.x}px, {$pos1.y}px);
-                width: {size}px;
-                height: {size}px;
-            "
+		  transform: translate({$pos1.x}px, {$pos1.y}px);
+		  width: {size}px;
+		  height: {size}px;
+		"
 		on:mousemove={(e) => handleMouseMove(e, pos1, defaults.svg1)}
 		on:mouseleave={() => handleMouseLeave(pos1, defaults.svg1)}
+		on:touchstart={(e) => handleTouchStart(e, pos1, defaults.svg1)}
+		on:touchmove={handleTouchMove}
+		on:touchend={handleTouchEnd}
 	>
 		<img src="/Pomegranate.svg" alt="Pomegranate" />
 	</div>
+
 	<div
 		class="svg-container"
 		style="
-                transform: translate({$pos2.x}px, {$pos2.y}px);
-                width: {size}px;
-                height: {size}px;
-            "
+		  transform: translate({$pos2.x}px, {$pos2.y}px);
+		  width: {size}px;
+		  height: {size}px;
+		"
 		on:mousemove={(e) => handleMouseMove(e, pos2, defaults.svg2)}
 		on:mouseleave={() => handleMouseLeave(pos2, defaults.svg2)}
+		on:touchstart={(e) => handleTouchStart(e, pos2, defaults.svg2)}
+		on:touchmove={handleTouchMove}
+		on:touchend={handleTouchEnd}
 	>
 		<img src="/Peach.svg" alt="Peach" />
 	</div>
+
 	<div
 		class="svg-container"
 		style="
-                transform: translate({$pos3.x}px, {$pos3.y}px);
-                width: {size}px;
-                height: {size}px;
-            "
+		  transform: translate({$pos3.x}px, {$pos3.y}px);
+		  width: {size}px;
+		  height: {size}px;
+		"
 		on:mousemove={(e) => handleMouseMove(e, pos3, defaults.svg3)}
 		on:mouseleave={() => handleMouseLeave(pos3, defaults.svg3)}
+		on:touchstart={(e) => handleTouchStart(e, pos3, defaults.svg3)}
+		on:touchmove={handleTouchMove}
+		on:touchend={handleTouchEnd}
 	>
 		<img src="/Grapes.svg" alt="Grapes" />
 	</div>
@@ -100,7 +157,6 @@
 		position: relative;
 		width: 450px;
 		height: 450px;
-		/* background-color: #f0f0f0; */
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -110,6 +166,7 @@
 	.svg-container {
 		position: absolute;
 		cursor: pointer;
+		touch-action: none;
 	}
 
 	.svg-container :global(svg) {

@@ -1,7 +1,16 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
+
 	import BarChart from '$lib/BarChart.svelte';
 	import InteractiveCollage from '$lib/InteractiveCollage.svelte';
 	import Link from '$lib/Link.svelte';
+
+	let isTouchDevice = false;
+	onMount(() => {
+		if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
+			isTouchDevice = true;
+		}
+	});
 </script>
 
 <main class="mx-auto w-full max-w-[1200px]">
@@ -43,9 +52,9 @@
 				<div>
 					<div class="relative">
 						<div
-							class="text-md absolute -right-2.5 -top-2.5 z-10 border px-4 py-2 font-freightText text-lg font-bold shadow-[4px_4px_0px_#f0f0f0] max-lg:hidden"
+							class="text-md absolute -top-2.5 right-20 z-10 border px-4 py-2 font-freightText text-lg font-bold shadow-[4px_4px_0px_#f0f0f0] lg:-right-2.5"
 						>
-							Hover Me!
+							{isTouchDevice ? 'Drag Me!' : 'Hover Me!'}
 							<div class="absolute -right-20 -top-12 w-24 rotate-12">
 								<img src="/emphasis-scribble.svg" alt="Emphasis Scribble" />
 							</div>
