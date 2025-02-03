@@ -98,6 +98,7 @@
 					'Apples',
 					'Bananas',
 					'Blueberries',
+					'Blackberries',
 					'Cantaloupe',
 					'Cherries',
 					'Grapes',
@@ -121,17 +122,17 @@
 			</div>
 			<BarChart
 				form={'Fresh'}
-				fruits={['Raspberries', 'Blueberries', 'Cherries', 'Strawberries']}
+				fruits={['Raspberries', 'Blueberries', 'Blackberries', 'Cherries', 'Strawberries']}
 			/>
 			<div class="my-8">
 				<p class="mt-8 py-3 font-proximaNova text-lg">
-					Raspberries ($7.73/lb) and Blueberries ($4.16/lb) are among the most expensive fruits when
-					bought fresh. This is in large part because they are both small, fragile berries. Berries
-					are almost always hand-picked, being very difficult to automate due to their variability
-					in time to ripen and their small size. Raspberries are especially bad, being one of the
-					most fragile fruits and extremely quick to spoil. Special care needs to be put into their
-					harvest and transport to ensure that they aren't crushed or spoiled by the time they reach
-					the final buyer. This explains their price nearly doubling that of the second most
+					Raspberries ($7.73/lb) and Blackberries ($6.75/lb) are among the most expensive fruits
+					when bought fresh. This is in large part because they are both small, fragile berries.
+					Berries are almost always hand-picked, being very difficult to automate due to their
+					variability in time to ripen and their small size. Raspberries are especially bad, being
+					one of the most fragile fruits and extremely quick to spoil. Special care needs to be put
+					into their harvest and transport to ensure that they aren't crushed or spoiled by the time
+					they reach the final buyer. This explains its price nearly doubling that of the third most
 					expensive fruit, cherries.
 				</p>
 				<p class="py-3 font-proximaNova text-lg">
@@ -157,8 +158,23 @@
 					expensive, easily doubling the price of Pineapples ($0.62/lb) and Bananas ($0.60/lb).
 					Considering that they all grow in similar climates, this doesn't make much sense at first.
 					However, mangoes are heavier than bananas without having the rugged exterior that
-					pineapples and watermelon do. They need to be specially packaged to ensure that they both
+					pineapples and watermelons do. They need to be specially packaged to ensure that they both
 					won't smash other fruits and won't get smashed themselves.
+				</p>
+				<p class="py-3 font-proximaNova text-lg">
+					But Watermelons ($0.38/lb) are incredibly heavy, right? So why would it be the cheapest
+					fruit to buy fresh? For one, watermelons have tough rinds that keep bacteria and animals
+					out. This means that growers don't need to worry about cutting into their profit margins
+					with pesticides. Also, watermelon benefit from a very small delta in quality among
+					producers. Generally, the worst quality watermelon will be considered "good enough" to the
+					average consumer. Grocery supply chains will buy the cheapest watermelons, in order to
+					pass those savings on to the consumer. Buyers won't notice a small drop in quality, but
+					they will notice an increase in price.
+				</p>
+				<p class="py-3 font-proximaNova text-lg">
+					Since we are comparing prices pound-for-pound, watermelons enjoy a distinct advantage
+					here, being both heavy (full of water!) and easy to distribute throughout the supply
+					chain.
 				</p>
 			</div>
 		</div>
@@ -172,10 +188,24 @@
 			</div>
 		</div>
 		<div class="mx-6">
-			<BarChart form={'Frozen'} fruits={['Blueberries', 'Raspberries', 'Strawberries']} />
-			<p class="mt-8 py-3 font-proximaNova text-lg"></p>
+			<BarChart
+				form={'Frozen'}
+				fruits={['Blueberries', 'Blackberries', 'Raspberries', 'Strawberries']}
+			/>
+			<p class="mt-8 py-3 font-proximaNova text-lg">
+				At first glance, frozen fruit seems to mirror that of fresh berries. In some ways, this is
+				true. The rankings are exactly the same, with raspberries being on top for most expensive,
+				followed by blackberries, blueberries, and strawberries. However, the deviation between
+				fruit prices is much tighter this time around.
+			</p>
+			<p class="py-3 font-proximaNova text-lg">
+				This is because raspberries and blackberries become over a dollar cheaper when frozen.
+				Considering their quick perishability, this makes a lot of sense. Frozen produce can be kept
+				nearly indefinitely. This means that any fruit that is quick to perish will enjoy
+				significant price cuts, since the distributor can keep the fruit flowing through the supply
+				chain for longer.
+			</p>
 			<p class="py-3 font-proximaNova text-lg"></p>
-			<p class="py-3 font-proximaNova"></p>
 		</div>
 	</section>
 	<section class="mt-36 lg:mx-8">
@@ -198,9 +228,13 @@
 					'Pineapple, packed in syrup or water'
 				]}
 			/>
-			<p class="mt-8 py-3 font-proximaNova text-lg"></p>
+			<p class="mt-8 py-3 font-proximaNova text-lg">
+				Cherries immediately jump out as an outlier here. Most of the fruits average around $2/lb,
+				but cherries sit at a staggering ($5.24/lb). This is for a few reasons. For one, the other
+				fruits are significantly heavier than cherries, and thus
+			</p>
 			<p class="py-3 font-proximaNova text-lg"></p>
-			<p class="py-3 font-proximaNova"></p>
+			<p class="py-3 font-proximaNova text-lg"></p>
 		</div>
 	</section>
 	<section class="mt-36 lg:mx-8">
