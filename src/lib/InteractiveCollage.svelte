@@ -34,11 +34,7 @@
 		damping: 0.6
 	});
 
-	function handleMouseMove(
-		event: MouseEvent,
-		pos: typeof pos1,
-		defaultPos: Position,
-	) {
+	function handleMouseMove(event: MouseEvent, pos: typeof pos1, defaultPos: Position) {
 		const container = event.currentTarget as HTMLDivElement;
 		const rect = container.getBoundingClientRect();
 		const mouseX = event.clientX - rect.left;
@@ -54,7 +50,7 @@
 
 		pos.set({
 			x: defaultPos.x + deltaX,
-			y: defaultPos.y + deltaY,
+			y: defaultPos.y + deltaY
 		});
 	}
 
@@ -117,7 +113,6 @@
 	.svg-container {
 		position: absolute;
 		cursor: pointer;
-		transition: z-index 0.1s ease;
 	}
 
 	.svg-container :global(svg) {
