@@ -4,6 +4,7 @@
 	import BarChart from '$lib/BarChart.svelte';
 	import InteractiveCollage from '$lib/InteractiveCollage.svelte';
 	import Link from '$lib/Link.svelte';
+	import ComparisonChart from '$lib/ComparisonChart.svelte';
 
 	let isTouchDevice = false;
 	onMount(() => {
@@ -198,6 +199,10 @@
 				followed by blackberries, blueberries, and strawberries. However, the deviation between
 				fruit prices is much tighter this time around.
 			</p>
+			<ComparisonChart
+				forms={['Fresh', 'Frozen']}
+				fruits={['Blueberries', 'Blackberries', 'Raspberries', 'Strawberries']}
+			/>
 			<p class="py-3 font-proximaNova text-lg">
 				This is because raspberries and blackberries become over a dollar cheaper when frozen.
 				Considering their quick perishability, this makes a lot of sense. Frozen produce can be kept
