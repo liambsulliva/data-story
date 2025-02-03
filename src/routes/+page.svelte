@@ -25,19 +25,19 @@
 	<section class="sm:mt-16 lg:mx-8">
 		<div class="flex flex-col justify-between gap-8 px-6 max-lg:items-center lg:flex-row">
 			<div>
-				<p class="font-proximaNova py-3">
+				<p class="font-proximaNova py-3 text-lg">
 					There has been a ton of chatter about the grocery prices as of late. Inflation ballooned
 					during the pandemic period, and despite the federal reserve’s best efforts, many are still
 					reeling from the higher prices that resulted from that period of high inflation.
 				</p>
-				<p class="font-proximaNova py-3">
+				<p class="font-proximaNova py-3 text-lg">
 					One of the major points that president-elect Donald Trump ran on in his 2024 campaign was
 					lowering the cost of grocery items. Namely, the <Link
 						href="https://www.newsweek.com/trump-promised-cheaper-eggscan-he-crack-it-2020449"
 						>cost of eggs</Link
 					>.
 				</p>
-				<p class="font-proximaNova py-3">
+				<p class="font-proximaNova py-3 text-lg">
 					But are groceries as expensive as people make them out to be? It depends. Let's break it
 					down, focussing specifically on the cost of different forms of fruit.
 				</p>
@@ -65,15 +65,44 @@
 				<img src="/src/assets/header-scribble.svg" alt="Underline" class="w-32" />
 			</div>
 		</div>
-		<div class="flex flex-row-reverse justify-between gap-4">
-			<div>
-				<p class="py-6"></p>
-				<p class="py-6"></p>
-				<p class="py-6"></p>
-			</div>
-			<div>
-				<BarChart form={'Fresh'} fruits={['Mangoes']} />
-			</div>
+		<div class="mx-6">
+			<BarChart
+				form={'Fresh'}
+				fruits={[
+					'Apples',
+					'Bananas',
+					'Blueberries',
+					'Cantaloupe',
+					'Cherries',
+					'Grapes',
+					'Kiwi',
+					'Mangoes',
+					'Pears',
+					'Pineapple',
+					'Plum',
+					'Raspberries',
+					'Strawberries',
+					'Watermelon'
+				]}
+			/>
+			<p class="font-proximaNova mt-8 py-3 text-lg">
+				Raspberries ($7.73/lb) and Blueberries ($4.16/lb) are among the most expensive fruits when
+				bought fresh. This is in large part because they are both small berries. Berries are almost
+				always hand-picked, being very difficult to automate due to their variability in time to
+				ripen and their small size. Raspberries are especially bad, being both fragile and extremely
+				quick to spoil. Special care needs to be put into their harvest and transport to ensure that
+				they aren't crushed or spoiled by the time they reach the final buyer. This explains their
+				price nearly doubling that of the second most expensive fruit, Cherries.
+			</p>
+			<p class="font-proximaNova py-3 text-lg">
+				Cherries ($4.66/lb) also fall victim to the small fruit problem, and are difficult to
+				automate because of that fact. They're hard to grow well, being grown mainly in a 4 month
+				period between late spring and early summer in California, Oregon, and Washington. They are
+				also not ripe for very long, needing to be carefully monitored to ensure they don't spoil.<Link
+					href="https://www.mashed.com/194002/why-are-cherries-so-expensive/"><sup>1</sup></Link
+				>
+			</p>
+			<p class="font-proximaNova py-3"></p>
 		</div>
 	</section>
 	<section class="mt-36 lg:mx-8">
