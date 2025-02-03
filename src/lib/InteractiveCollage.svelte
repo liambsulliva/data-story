@@ -82,9 +82,7 @@
 		const touchX = touch.clientX - rect.left;
 		const touchY = touch.clientY - rect.top;
 
-		const centerX = rect.width / 2;
-		const centerY = rect.height / 2;
-
+		// Reduce delta to make dragging feel more responsive
 		const deltaX = (touchX - startX) / 2.5;
 		const deltaY = (touchY - startY) / 2.5;
 
