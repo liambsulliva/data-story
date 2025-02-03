@@ -2,14 +2,9 @@
 	import BarChart from '$lib/BarChart.svelte';
 	import InteractiveCollage from '$lib/InteractiveCollage.svelte';
 	import Link from '$lib/Link.svelte';
-	import Apple from '/src/assets/Apple.svg?raw';
 	import Grapes from '/src/assets/Grapes.svg?raw';
 	import Pomegranate from '/src/assets/Pomegranate.svg?raw';
 	import Peach from '/src/assets/Peach.svg?raw';
-	import Lemons from '/src/assets/Lemons.svg?raw';
-	import Plum from '/src/assets/Plum.svg?raw';
-	import Pineapple from '/src/assets/Pineapple.svg?raw';
-	import EmphasisScribble from '/src/assets/emphasis-scribble.svg?raw';
 </script>
 
 <main class="mx-auto w-full max-w-[1200px]">
@@ -55,7 +50,7 @@
 						>
 							Hover Me!
 							<div class="absolute -right-20 -top-12 w-24 rotate-12">
-								{@html EmphasisScribble}
+								<img src="/emphasis-scribble.svg" alt="Emphasis Scribble" />
 							</div>
 						</div>
 						<InteractiveCollage svg1={Pomegranate} svg2={Peach} svg3={Grapes} />
@@ -85,9 +80,9 @@
 	<section class="mt-32 lg:mx-8">
 		<div class="relative mx-6 mb-12 inline-flex items-center">
 			<h2 class="mr-2 text-center font-freightText text-5xl font-bold">Fresh</h2>
-			{@html Apple}
+			<img src="/Apple.svg" alt="Apple" />
 			<div class="absolute bottom-0 left-0 right-0">
-				<img src="/src/assets/header-scribble.svg" alt="Underline" class="w-32" />
+				<img src="/header-scribble.svg" alt="Underline" class="w-32" />
 			</div>
 		</div>
 		<div class="mx-6">
@@ -165,9 +160,9 @@
 	<section class="mt-36 lg:mx-8">
 		<div class="relative mx-6 mb-12 inline-flex items-center">
 			<h2 class="mr-2 text-center font-freightText text-5xl font-bold">Frozen</h2>
-			{@html Plum}
+			<img src="/Plum.svg" alt="Plum" />
 			<div class="absolute bottom-0 left-0 right-0">
-				<img src="/src/assets/header-scribble.svg" alt="Underline" class="w-36" />
+				<img src="/header-scribble.svg" alt="Underline" class="w-36" />
 			</div>
 		</div>
 		<div class="mx-6">
@@ -180,9 +175,9 @@
 	<section class="mt-36 lg:mx-8">
 		<div class="relative mx-6 mb-12 inline-flex items-center">
 			<h2 class="mr-2 text-center font-freightText text-5xl font-bold">Canned</h2>
-			{@html Pineapple}
+			<img src="/Pineapple.svg" alt="Pineapple" />
 			<div class="absolute -bottom-1 left-0 right-0">
-				<img src="/src/assets/header-scribble.svg" alt="Underline" class="w-40" />
+				<img src="/header-scribble.svg" alt="Underline" class="w-40" />
 			</div>
 		</div>
 		<div class="mx-6">
@@ -205,9 +200,9 @@
 	<section class="mt-36 lg:mx-8">
 		<div class="relative mx-6 mb-12 inline-flex items-center">
 			<h2 class="mr-4 text-center font-freightText text-5xl font-bold">Dried</h2>
-			{@html Grapes}
+			<img src="/Grapes.svg" alt="Grapes" />
 			<div class="absolute bottom-0 left-0 right-0">
-				<img src="/src/assets/header-scribble.svg" alt="Underline" class="w-32" />
+				<img src="/header-scribble.svg" alt="Underline" class="w-32" />
 			</div>
 		</div>
 		<div class="mx-6">
@@ -233,9 +228,9 @@
 	<section class="mt-36 lg:mx-8">
 		<div class="relative mx-6 mb-12 inline-flex items-center">
 			<h2 class="mr-2 text-center font-freightText text-5xl font-bold">Juice</h2>
-			{@html Lemons}
+			<img src="/Lemons.svg" alt="Lemons" />
 			<div class="absolute bottom-0 left-0 right-0">
-				<img src="/src/assets/header-scribble.svg" alt="Underline" class="w-32" />
+				<img src="/header-scribble.svg" alt="Underline" class="w-32" />
 			</div>
 		</div>
 		<div class="mx-6">

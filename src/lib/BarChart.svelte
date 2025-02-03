@@ -23,7 +23,7 @@
 
 	// Parse CSV
 	const loadData = async (): Promise<FruitData[]> => {
-		const response = await fetch('/src/data/Fruit-Prices-2022.csv');
+		const response = await fetch('/Fruit-Prices-2022.csv');
 		const text = await response.text();
 		return d3.csvParse(text) as unknown as FruitData[];
 	};
