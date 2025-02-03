@@ -177,11 +177,11 @@
 				const isActive = activeBar === this;
 
 				if (isActive) {
-					d3.select(this).attr('fill', '#6C2F13');
+					d3.select(this).attr('fill', darkenColor(d.FruitColor));
 					tooltip.style('opacity', 0);
 					activeBar = null;
 				} else {
-					if (activeBar) d3.select(activeBar).attr('fill', '#6C2F13');
+					if (activeBar) d3.select(activeBar).attr('fill', originalColor);
 					activeBar = this;
 					d3.select(this).attr('fill', darkenColor(d.FruitColor));
 					tooltip
@@ -358,18 +358,21 @@
 </script>
 
 {#if forms.length > 1}
-	<div class="form-buttons">
-		{#each forms as form}
-			<button
-				class:active={activeForm === form}
-				on:click={() => {
-					activeForm = form;
-					createChart();
-				}}
-			>
-				{form}
-			</button>
-		{/each}
+	<div class="form-buttons-container">
+		<div class="form-buttons">
+			{#each forms as form}
+				<button
+					class="text-md relative z-10 border border-[#000] bg-white px-4 py-2 font-proximaNova font-bold shadow-[4px_4px_0px_#000] hover:bg-gray-100"
+					class:active={activeForm === form}
+					on:click={() => {
+						activeForm = form;
+						createChart();
+					}}
+				>
+					{form}
+				</button>
+			{/each}
+		</div>
 	</div>
 {/if}
 
@@ -381,5 +384,19 @@
 		max-width: 1200px;
 		height: auto;
 		min-height: 100px;
+	}
+
+	.form-buttons-container {
+		position: relative;
+		margin-top: 2rem;
+	}
+
+	.form-buttons {
+		position: absolute;
+		right: 1rem;
+		top: -1.5rem;
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
 	}
 </style>

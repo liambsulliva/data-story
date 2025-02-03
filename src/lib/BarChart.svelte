@@ -176,11 +176,11 @@
 				const isActive = activeBar === this;
 
 				if (isActive) {
-					d3.select(this).attr('fill', '#6C2F13');
+					d3.select(this).attr('fill', darkenColor(d.FruitColor));
 					tooltip.style('opacity', 0);
 					activeBar = null;
 				} else {
-					if (activeBar) d3.select(activeBar).attr('fill', '#6C2F13');
+					if (activeBar) d3.select(activeBar).attr('fill', originalColor);
 					activeBar = this;
 					d3.select(this).attr('fill', darkenColor(d.FruitColor));
 					tooltip

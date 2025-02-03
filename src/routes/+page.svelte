@@ -189,10 +189,6 @@
 			</div>
 		</div>
 		<div class="mx-6">
-			<BarChart
-				form={'Frozen'}
-				fruits={['Blueberries', 'Blackberries', 'Raspberries', 'Strawberries']}
-			/>
 			<p class="mt-8 py-3 font-proximaNova text-lg">
 				At first glance, frozen fruit seems to mirror that of fresh berries. In some ways, this is
 				true. The rankings are exactly the same, with raspberries being on top for most expensive,
