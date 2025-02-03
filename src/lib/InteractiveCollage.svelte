@@ -85,8 +85,8 @@
 		const centerX = rect.width / 2;
 		const centerY = rect.height / 2;
 
-		const deltaX = (touchX - startX) / 10;
-		const deltaY = (touchY - startY) / 10;
+		const deltaX = (touchX - startX) / 2.5;
+		const deltaY = (touchY - startY) / 2.5;
 
 		currentPos.set({
 			x: currentDefault.x + deltaX,

@@ -42,7 +42,7 @@
 					<p class="py-3 font-proximaNova text-lg">
 						But are groceries as expensive as people make them out to be? It depends. Staple complex
 						carbohydrates like corn and wheat are grown domestically in the United States. <Link
-							href="https://en.wikipedia.org/wiki/Corn_syrup">Corn Syrup</Link
+							href="https://en.wikipedia.org/wiki/Corn_syrup">Corn syrup</Link
 						> is used in so many processed foods because of how cheap it is to manufacture. It doesn't
 						require any sort of foreign imports to make while being irresistably delicious. The domestic
 						availability factor is the reason we consistently reach out to the corn substance and not,
