@@ -230,7 +230,7 @@
 			/>
 			<p class="mt-8 py-3 font-proximaNova text-lg">
 				Cherries immediately jump out as an outlier here. Most of the fruits average around $2/lb,
-				but cherries sit at a staggering ($5.24/lb). This is for a few reasons. For one, the other
+				but cherries sit at a staggering $5.24/lb. This is for a few reasons. For one, the other
 				fruits are significantly heavier than cherries, and thus
 			</p>
 			<p class="py-3 font-proximaNova text-lg"></p>
