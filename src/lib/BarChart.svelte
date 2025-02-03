@@ -29,8 +29,12 @@
 		return d3.csvParse(text) as unknown as FruitData[];
 	};
 
-	// Helper function to get the first part of the fruit name (before comma)
-	const getFruitDisplayName = (fruit: string) => fruit.split(',')[0].trim();
+	// Helper function to get the first part of the fruit name (before comma) OR the alternate name in (parens)
+	const getFruitDisplayName = (fruit: string) => {
+		const primaryName = fruit.split(',')[0].trim();
+		const match = primaryName.match(/\(([^)]+)\)/);
+		return match ? match[1].charAt(0).toUpperCase() + match[1].slice(1) : primaryName;
+	};
 
 	const createChart = async () => {
 		d3.select(chartContainer).selectAll('*').remove();
