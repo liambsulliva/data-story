@@ -231,7 +231,10 @@
 			<p class="mt-8 py-3 font-proximaNova text-lg">
 				Cherries immediately jump out as an outlier here. Most of the fruits average around $2/lb,
 				but cherries sit at a staggering $5.24/lb. This is for a few reasons. For one, the other
-				fruits are significantly heavier than cherries, and thus
+				fruits are significantly larger than cherries, and thus distributors can fill a storage
+				pallet with less of those other fruits and make more per sale. Also, cherries lose a lot of
+				their volume when dried out, meaning that more cherries need to be packed into a single
+				container.
 			</p>
 			<p class="py-3 font-proximaNova text-lg"></p>
 			<p class="py-3 font-proximaNova text-lg"></p>

@@ -10,6 +10,7 @@
 		CupEquivalentSize: number;
 		CupEquivalentUnit: string;
 		CupEquivalentPrice: number;
+		FruitColor: string;
 	}
 
 	const { fruits = [], form = '' } = $props<{
@@ -24,7 +25,7 @@
 
 	// Parse CSV
 	const loadData = async (): Promise<FruitData[]> => {
-		const response = await fetch('/Fruit-Prices-2022.csv');
+		const response = await fetch('/Fruit-Prices-2022-Modified.csv');
 		const text = await response.text();
 		return d3.csvParse(text) as unknown as FruitData[];
 	};
@@ -140,8 +141,17 @@
 			.data(filteredData)
 			.enter()
 			.append('rect')
-			.attr('fill', '#6C2F13')
+			.attr('fill', (d) => d.FruitColor)
+			.attr('stroke', 'black')
+			.attr('stroke-width', 2)
 			.attr('rx', containerWidth < 450 ? 2 : containerWidth < 800 ? 4 : 6);
+
+		const darkenColor = (color: string, factor = 0.8): string => {
+			const c = d3.color(color);
+			return c ? c.darker(factor).toString() : color;
+		};
+
+		const originalColor = (d: any) => d.FruitColor;
 
 		// Construct bars based on layout
 		if (isMobileLayout) {
@@ -172,7 +182,7 @@
 				} else {
 					if (activeBar) d3.select(activeBar).attr('fill', '#6C2F13');
 					activeBar = this;
-					d3.select(this).attr('fill', '#401D0B');
+					d3.select(this).attr('fill', darkenColor(d.FruitColor));
 					tooltip
 						.style('opacity', 1)
 						.html(
@@ -189,14 +199,14 @@
 			d3.select('body').on('click', () => {
 				if (activeBar) {
 					tooltip.style('opacity', 0);
-					d3.select(activeBar).attr('fill', '#6C2F13');
+					d3.select(activeBar).attr('fill', originalColor);
 					activeBar = null;
 				}
 			});
 		} else {
 			bars
 				.on('mouseover', function (event, d) {
-					d3.select(this).transition().duration(200).attr('fill', '#401D0B');
+					d3.select(this).transition().duration(200).attr('fill', darkenColor(d.FruitColor));
 					tooltip
 						.style('opacity', 1)
 						.html(
@@ -212,7 +222,7 @@
 					tooltip.style('left', `${event.pageX + 10}px`).style('top', `${event.pageY - 28}px`);
 				})
 				.on('mouseout', function () {
-					d3.select(this).transition().duration(200).attr('fill', '#6C2F13');
+					d3.select(this).transition().duration(200).attr('fill', originalColor);
 					tooltip.style('opacity', 0);
 				});
 		}

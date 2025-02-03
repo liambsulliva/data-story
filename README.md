@@ -1,38 +1,41 @@
-# sv
+# How Expensive is Fruit? - A Data Story
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+This static website provides an engaging exploration of fruit prices, utilizing reactive graphs that adapt to the user's device for an optimal viewing experience no matter how you're interacting with the site.
 
-## Creating a project
+## Features
 
-If you're seeing this, you've probably already done this step. Congrats!
+- **Responsive Design**: The website is designed to be fully responsive, ensuring that the graphs and content adjust seamlessly to different screen sizes, from mobile devices to large desktop displays.
+- **Reactive Graphs**: Interactive graphs built with D3.js that dynamically update based on the data provided, allowing users to visualize fruit prices in various forms (fresh, frozen, canned, dried, and juiced).
+- **SvelteKit Prerendering**: The site leverages SvelteKit's prerendering capabilities, loading HTML at build time. This approach enhances performance by serving pre-built pages instead of relying solely on JavaScript to render the DOM.
+- **Homey Aesthetic**: The design features a charming, hand-drawn style reminiscent of your local farmer's market, creating a warm and inviting atmosphere for users.
 
-```bash
-# create a new project in the current directory
-npx sv create
+## Getting Started
 
-# create a new project in my-app
-npx sv create my-app
-```
+To get a local copy up and running, follow these steps:
 
-## Developing
+1. **Clone the repository**:
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+   ```bash
+   git clone https://github.com/yourusername/dnid-data-story.git
+   cd dnid-data-story
+   ```
 
-```bash
-npm run dev
+2. **Install dependencies**:
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+   ```bash
+   npm install
+   ```
 
-## Building
+3. **Run the development server**:
 
-To create a production version of your app:
+   ```bash
+   npm run dev
+   ```
 
-```bash
-npm run build
-```
+4. **Open your browser** and navigate to `http://localhost:3000` to see the project in action.
 
-You can preview the production build with `npm run preview`.
+## Built With
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+- [SvelteKit](https://kit.svelte.dev) - The framework used for building the site.
+- [D3.js](https://d3js.org) - A JavaScript library for producing dynamic, interactive data visualizations in web browsers.
+- [Tailwind CSS](https://tailwindcss.com) - A utility-first CSS framework for styling the application.
