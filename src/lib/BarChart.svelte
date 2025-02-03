@@ -28,6 +28,9 @@
 		return d3.csvParse(text) as unknown as FruitData[];
 	};
 
+	// Helper function to get the first part of the fruit name (before comma)
+	const getFruitDisplayName = (fruit: string) => fruit.split(',')[0].trim();
+
 	const createChart = async () => {
 		d3.select(chartContainer).selectAll('*').remove();
 
@@ -47,10 +50,10 @@
 		const numberOfBars = filteredData.length;
 
 		// Mobile-specific dimensions
-		const barHeight = 25;
+		const barHeight = 30;
 		const barSpacing = 10;
 
-		// Responsive margins, crazy ass ternary
+		// Responsive margins
 		const margin = {
 			top: 20,
 			right: isMobileLayout ? 10 : containerWidth < 450 ? 10 : containerWidth < 800 ? 20 : 30,
@@ -95,13 +98,13 @@
 
 			y = d3
 				.scaleBand()
-				.domain(filteredData.map((d) => d.Fruit))
+				.domain(filteredData.map((d) => getFruitDisplayName(d.Fruit)))
 				.range([height, 0])
 				.padding(barSpacing / (barHeight + barSpacing));
 		} else {
 			x = d3
 				.scaleBand()
-				.domain(filteredData.map((d) => d.Fruit))
+				.domain(filteredData.map((d) => getFruitDisplayName(d.Fruit)))
 				.range([0, width])
 				.padding(containerWidth < 450 ? 0.05 : containerWidth < 800 ? 0.1 : 0.15);
 
@@ -121,6 +124,7 @@
 			.style('background-color', 'rgba(255, 255, 255, 1)')
 			.style('border', '1px solid #ddd')
 			.style('padding', containerWidth < 800 ? '8px' : '12px')
+			.style('font-family', 'proxima-nova')
 			.style('font-size', containerWidth < 450 ? '12px' : containerWidth < 800 ? '14px' : '16px')
 			.style('pointer-events', 'none')
 			.style('box-shadow', '4px 4px 0px #f0f0f0');
@@ -138,12 +142,12 @@
 		if (isMobileLayout) {
 			bars
 				.attr('x', 0)
-				.attr('y', (d) => (y as d3.ScaleBand<string>)(d.Fruit)!)
+				.attr('y', (d) => (y as d3.ScaleBand<string>)(getFruitDisplayName(d.Fruit))!)
 				.attr('width', (d) => (x as d3.ScaleLinear<number, number>)(d.RetailPrice))
 				.attr('height', (y as d3.ScaleBand<string>).bandwidth());
 		} else {
 			bars
-				.attr('x', (d) => (x as d3.ScaleBand<string>)(d.Fruit)!)
+				.attr('x', (d) => (x as d3.ScaleBand<string>)(getFruitDisplayName(d.Fruit))!)
 				.attr('y', (d) => (y as d3.ScaleLinear<number, number>)(d.RetailPrice))
 				.attr('width', (x as d3.ScaleBand<string>).bandwidth())
 				.attr('height', (d) => height - (y as d3.ScaleLinear<number, number>)(d.RetailPrice));
@@ -168,7 +172,7 @@
 						.style('opacity', 1)
 						.html(
 							`
-							<div style="font-weight: bold">${d.Fruit}</div>
+							<div style="font-weight: bold">${getFruitDisplayName(d.Fruit)}</div>
 							<div>$${Number(d.RetailPrice).toFixed(2)} ${d.RetailPriceUnit}</div>
 						`
 						)
@@ -192,7 +196,7 @@
 						.style('opacity', 1)
 						.html(
 							`
-							<div style="font-weight: bold">${d.Fruit}</div>
+							<div style="font-weight: bold">${getFruitDisplayName(d.Fruit)}</div>
 							<div>$${Number(d.RetailPrice).toFixed(2)} ${d.RetailPriceUnit}</div>
 						`
 						)
@@ -217,7 +221,7 @@
 					d3
 						.axisBottom(x as d3.ScaleLinear<number, number>)
 						.ticks(5)
-						.tickFormat((d) => `$${d}`)
+						.tickFormat((d) => `$${Number(d).toFixed(2)}`)
 				);
 
 			xAxis
@@ -259,7 +263,7 @@
 				yAxis.call(
 					d3
 						.axisLeft(y as d3.ScaleLinear<number, number>)
-						.tickFormat((d) => `$${d}`)
+						.tickFormat((d) => `$${Number(d).toFixed(2)}`)
 						.ticks(5)
 				);
 			} else if (containerWidth < 800) {
@@ -267,7 +271,7 @@
 				yAxis.call(
 					d3
 						.axisLeft(y as d3.ScaleLinear<number, number>)
-						.tickFormat((d) => `$${d}`)
+						.tickFormat((d) => `$${Number(d).toFixed(2)}`)
 						.ticks(7)
 				);
 			} else {
@@ -275,7 +279,7 @@
 				yAxis.call(
 					d3
 						.axisLeft(y as d3.ScaleLinear<number, number>)
-						.tickFormat((d) => `$${d}`)
+						.tickFormat((d) => `$${Number(d).toFixed(2)}`)
 						.ticks(10)
 				);
 			}
@@ -297,7 +301,6 @@
 
 	let resizeObserver: ResizeObserver;
 
-	// Rerun chart creation function whenever ResizeObserver detects change in screen width
 	$effect(() => {
 		if (chartContainer && form && fruits.length > 0) {
 			createChart();

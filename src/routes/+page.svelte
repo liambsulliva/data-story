@@ -85,24 +85,39 @@
 					'Watermelon'
 				]}
 			/>
-			<p class="font-proximaNova mt-8 py-3 text-lg">
-				Raspberries ($7.73/lb) and Blueberries ($4.16/lb) are among the most expensive fruits when
-				bought fresh. This is in large part because they are both small berries. Berries are almost
-				always hand-picked, being very difficult to automate due to their variability in time to
-				ripen and their small size. Raspberries are especially bad, being both fragile and extremely
-				quick to spoil. Special care needs to be put into their harvest and transport to ensure that
-				they aren't crushed or spoiled by the time they reach the final buyer. This explains their
-				price nearly doubling that of the second most expensive fruit, Cherries.
-			</p>
-			<p class="font-proximaNova py-3 text-lg">
-				Cherries ($4.66/lb) also fall victim to the small fruit problem, and are difficult to
-				automate because of that fact. They're hard to grow well, being grown mainly in a 4 month
-				period between late spring and early summer in California, Oregon, and Washington. They are
-				also not ripe for very long, needing to be carefully monitored to ensure they don't spoil.<Link
-					href="https://www.mashed.com/194002/why-are-cherries-so-expensive/"><sup>1</sup></Link
-				>
-			</p>
-			<p class="font-proximaNova py-3"></p>
+			<div class="my-8">
+				<p class="font-proximaNova mt-8 py-3 text-lg">
+					Raspberries ($7.73/lb) and Blueberries ($4.16/lb) are among the most expensive fruits when
+					bought fresh. This is in large part because they are both small berries. Berries are
+					almost always hand-picked, being very difficult to automate due to their variability in
+					time to ripen and their small size. Raspberries are especially bad, being both fragile and
+					extremely quick to spoil. Special care needs to be put into their harvest and transport to
+					ensure that they aren't crushed or spoiled by the time they reach the final buyer. This
+					explains their price nearly doubling that of the second most expensive fruit, cherries.
+				</p>
+				<p class="font-proximaNova py-3 text-lg">
+					Strawberries ($2.97/lb) suffer from the berry problem, but are a little bigger and
+					tougher. Additionally, strawberries can grow in a variety of climates and soil types,
+					which gives growers much more flexibility in how they are grown. They have a longer
+					growing season, which helps to extend the supply window.
+				</p>
+				<p class="font-proximaNova py-3 text-lg">
+					Cherries ($4.66/lb) also fall victim to the small fruit problem, and are difficult to
+					automate because of that fact. They're hard to grow well, being grown mainly in a 4 month
+					period between late spring and early summer in California, Oregon, and Washington. They
+					are also not ripe for very long, needing to be carefully monitored to ensure they don't
+					spoil.<Link href="https://www.mashed.com/194002/why-are-cherries-so-expensive/"
+						><sup>1</sup></Link
+					>
+				</p>
+			</div>
+			<BarChart
+				form={'Fresh'}
+				fruits={['Mangoes', 'Bananas', 'Cantaloupe', 'Pineapple', 'Watermelon']}
+			/>
+			<div class="my-8">
+				<p class="font-proximaNova py-3 text-lg">Looking at some of the</p>
+			</div>
 		</div>
 	</section>
 	<section class="mt-36 lg:mx-8">
@@ -113,15 +128,11 @@
 				<img src="/src/assets/header-scribble.svg" alt="Underline" class="w-36" />
 			</div>
 		</div>
-		<div class="flex flex-row justify-between gap-4">
-			<div>
-				<p class="my-6"></p>
-				<p class="my-6"></p>
-				<p class="my-6"></p>
-			</div>
-			<div>
-				<BarChart form={'Frozen'} fruits={['Mangoes']} />
-			</div>
+		<div class="mx-6">
+			<BarChart form={'Frozen'} fruits={['Blueberries', 'Raspberries', 'Strawberries']} />
+			<p class="font-proximaNova mt-8 py-3 text-lg"></p>
+			<p class="font-proximaNova py-3 text-lg"></p>
+			<p class="font-proximaNova py-3"></p>
 		</div>
 	</section>
 	<section class="mt-36 lg:mx-8">
@@ -132,15 +143,21 @@
 				<img src="/src/assets/header-scribble.svg" alt="Underline" class="w-40" />
 			</div>
 		</div>
-		<div class="flex flex-row-reverse justify-between gap-4">
-			<div>
-				<p class="my-6"></p>
-				<p class="my-6"></p>
-				<p class="my-6"></p>
-			</div>
-			<div>
-				<BarChart form={'Canned'} fruits={['Mangoes']} />
-			</div>
+		<div class="mx-6">
+			<BarChart
+				form={'Canned'}
+				fruits={[
+					'Apples, applesauce',
+					'Apricots, packed in syrup or water',
+					'Cherries, packed in syrup or water',
+					'Peaches, packed in syrup or water',
+					'Pears, packed in syrup or water',
+					'Pineapple, packed in syrup or water'
+				]}
+			/>
+			<p class="font-proximaNova mt-8 py-3 text-lg"></p>
+			<p class="font-proximaNova py-3 text-lg"></p>
+			<p class="font-proximaNova py-3"></p>
 		</div>
 	</section>
 	<section class="mt-36 lg:mx-8">
@@ -151,15 +168,24 @@
 				<img src="/src/assets/header-scribble.svg" alt="Underline" class="w-32" />
 			</div>
 		</div>
-		<div class="flex flex-row-reverse justify-between gap-4">
-			<div>
-				<p class="my-6"></p>
-				<p class="my-6"></p>
-				<p class="my-6"></p>
-			</div>
-			<div>
-				<BarChart form={'Canned'} fruits={['Mangoes']} />
-			</div>
+		<div class="mx-6">
+			<BarChart
+				form={'Dried'}
+				fruits={[
+					'Mangoes',
+					'Pineapple',
+					'Dates',
+					'Figs',
+					'Cranberries',
+					'Apricots',
+					'Grapes (raisins)',
+					'Plum (prunes)',
+					'Papaya'
+				]}
+			/>
+			<p class="font-proximaNova mt-8 py-3 text-lg"></p>
+			<p class="font-proximaNova py-3 text-lg"></p>
+			<p class="font-proximaNova py-3"></p>
 		</div>
 	</section>
 	<section class="mt-36 lg:mx-8">
@@ -170,15 +196,21 @@
 				<img src="/src/assets/header-scribble.svg" alt="Underline" class="w-32" />
 			</div>
 		</div>
-		<div class="flex flex-row-reverse justify-between gap-4">
-			<div>
-				<p class="my-6"></p>
-				<p class="my-6"></p>
-				<p class="my-6"></p>
-			</div>
-			<div>
-				<BarChart form={'Canned'} fruits={['Mangoes']} />
-			</div>
+		<div class="mx-6">
+			<BarChart
+				form={'Juice'}
+				fruits={[
+					'Apples, ready-to-drink',
+					'Grapefruit, ready-to-drink',
+					'Grapes, ready-to-drink',
+					'Oranges, ready-to-drink',
+					'Pineapple, ready-to-drink',
+					'Pomegranate, ready-to-drink'
+				]}
+			/>
+			<p class="font-proximaNova mt-8 py-3 text-lg"></p>
+			<p class="font-proximaNova py-3 text-lg"></p>
+			<p class="font-proximaNova py-3"></p>
 		</div>
 	</section>
 </main>
