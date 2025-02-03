@@ -52,7 +52,7 @@
 				<div>
 					<div class="relative">
 						<div
-							class="text-md absolute -top-2.5 right-20 z-10 border px-4 py-2 font-freightText text-lg font-bold shadow-[4px_4px_0px_#f0f0f0] lg:-right-2.5"
+							class="text-md absolute -top-2.5 right-20 z-10 border border-[#000] bg-white px-4 py-2 font-proximaNova text-lg font-bold shadow-[4px_4px_0px_#000] lg:-right-2.5"
 						>
 							{isTouchDevice ? 'Drag Me!' : 'Hover Me!'}
 							<div class="absolute -right-20 -top-12 w-24 rotate-12">
@@ -257,3 +257,6 @@
 		</div>
 	</section>
 </main>
+<footer class="m-4 font-proximaNova">
+	<p>Made with ❤️ by <Link href="https://liambsullivan.com">Liam Sullivan</Link></p>
+</footer>

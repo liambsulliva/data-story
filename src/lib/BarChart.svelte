@@ -127,12 +127,12 @@
 			.style('opacity', 0)
 			.style('position', 'absolute')
 			.style('background-color', 'rgba(255, 255, 255, 1)')
-			.style('border', '1px solid #ddd')
+			.style('border', '1px solid #000')
 			.style('padding', containerWidth < 800 ? '8px' : '12px')
 			.style('font-family', 'proxima-nova')
 			.style('font-size', containerWidth < 450 ? '12px' : containerWidth < 800 ? '14px' : '16px')
 			.style('pointer-events', 'none')
-			.style('box-shadow', '4px 4px 0px #f0f0f0');
+			.style('box-shadow', '4px 4px 0px #000');
 
 		// Create bars
 		const bars = svg
@@ -140,7 +140,7 @@
 			.data(filteredData)
 			.enter()
 			.append('rect')
-			.attr('fill', '#2e6f40')
+			.attr('fill', '#6C2F13')
 			.attr('rx', containerWidth < 450 ? 2 : containerWidth < 800 ? 4 : 6);
 
 		// Construct bars based on layout
@@ -166,13 +166,13 @@
 				const isActive = activeBar === this;
 
 				if (isActive) {
-					d3.select(this).attr('fill', '#2e6f40');
+					d3.select(this).attr('fill', '#6C2F13');
 					tooltip.style('opacity', 0);
 					activeBar = null;
 				} else {
-					if (activeBar) d3.select(activeBar).attr('fill', '#2e6f40');
+					if (activeBar) d3.select(activeBar).attr('fill', '#6C2F13');
 					activeBar = this;
-					d3.select(this).attr('fill', '#235631');
+					d3.select(this).attr('fill', '#401D0B');
 					tooltip
 						.style('opacity', 1)
 						.html(
@@ -189,14 +189,14 @@
 			d3.select('body').on('click', () => {
 				if (activeBar) {
 					tooltip.style('opacity', 0);
-					d3.select(activeBar).attr('fill', '#2e6f40');
+					d3.select(activeBar).attr('fill', '#6C2F13');
 					activeBar = null;
 				}
 			});
 		} else {
 			bars
 				.on('mouseover', function (event, d) {
-					d3.select(this).transition().duration(200).attr('fill', '#235631');
+					d3.select(this).transition().duration(200).attr('fill', '#401D0B');
 					tooltip
 						.style('opacity', 1)
 						.html(
@@ -212,7 +212,7 @@
 					tooltip.style('left', `${event.pageX + 10}px`).style('top', `${event.pageY - 28}px`);
 				})
 				.on('mouseout', function () {
-					d3.select(this).transition().duration(200).attr('fill', '#2e6f40');
+					d3.select(this).transition().duration(200).attr('fill', '#6C2F13');
 					tooltip.style('opacity', 0);
 				});
 		}
