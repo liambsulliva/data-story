@@ -45,7 +45,7 @@
 						carbohydrates like corn and wheat are grown domestically in the United States. <Link
 							href="https://en.wikipedia.org/wiki/Corn_syrup">Corn syrup</Link
 						> is used in so many processed foods because of how cheap it is to manufacture. It doesn't
-						require any sort of foreign imports to make, while being irresistably delicious. The domestic
+						require any sort of foreign imports to make, while being irresistibly delicious. The domestic
 						availability factor is the reason we consistently reach out to the corn substance and not,
 						say, agave syrup.
 					</p>
@@ -65,7 +65,7 @@
 				</div>
 			</div>
 			<p class="py-3 font-proximaNova text-lg">
-				Fruit is a little different though. Fruits are seasonally grown, can only grow in specific
+				Fruit is a little different, though. Fruits are seasonally grown, can only grow in specific
 				environments, and need to be kept in specific conditions to remain fresh for the end
 				consumer. As such, there is a large degree of variability in how much certain fruits cost.
 			</p>
@@ -117,8 +117,7 @@
 				<p class="mt-8 py-3 font-proximaNova text-lg">
 					Looking at the full graph, there are a few trends that jump out immediately. For one,
 					small fruits like berries are far more likely to be expensive. Interestingly, tropical
-					fruits are generally the least expensive, despite the fact that they need to grow in very
-					specific environments.
+					fruits are the least expensive, despite needing to grow in very specific environments.
 				</p>
 			</div>
 			<BarChart
@@ -128,10 +127,10 @@
 			<div class="my-8">
 				<p class="mt-8 py-3 font-proximaNova text-lg">
 					Raspberries ($7.73/lb) and blackberries ($6.75/lb) are among the most expensive fruits
-					when bought fresh. This is in large part because they are both small, fragile berries.
-					Berries are always hand-picked, being very difficult to automate due to their variability
-					in time to ripen and their small size. Raspberries are especially bad, being extremely
-					quick to spoil and picky about the season they grow in.<Link
+					when bought fresh. This is because they are both small, fragile berries. Berries are
+					always hand-picked, being very difficult to automate due to their variability in time to
+					ripen and their small size. Raspberries are especially bad, being extremely quick to spoil
+					and picky about the season they grow in.<Link
 						href="https://www.mashed.com/196372/why-are-raspberries-so-expensive/"
 						><sup>1</sup></Link
 					> Special care needs to be put into their harvest and transport to ensure that they aren't
@@ -139,8 +138,8 @@
 					that of the third most expensive fruit, cherries.
 				</p>
 				<p class="py-3 font-proximaNova text-lg">
-					Cherries ($4.66/lb) also fall victim to the small fruit problem, and are difficult to
-					automate because of that fact. They're hard to grow well, being grown mainly in a 4 month
+					Cherries ($4.66/lb) also fall victim to the small fruit problem and are difficult to
+					automate because of that fact. They're hard to grow well, being grown mainly in a 4-month
 					period between late spring and early summer in California, Oregon, and Washington. They
 					are also not ripe for very long, needing to be carefully monitored to ensure they don't
 					spoil.<Link href="https://www.mashed.com/194002/why-are-cherries-so-expensive/"
@@ -161,8 +160,8 @@
 				>
 					<h3 class="font-proximaNova text-2xl font-bold">An aside...</h3>
 					<p class="font-proximaNova text-lg">
-						The abundance and affordability of tropical fruits is deeply tied to caribbean slave
-						labor dating back to the late 1800s. You can read more about it <Link
+						The abundance and affordability of tropical fruits is deeply tied to Caribbean labor
+						exploitation dating back to the late 1800s. You can read more about it <Link
 							href="https://www.thecollector.com/how-tropical-fruits-became-commonplace-usa/"
 							>here</Link
 						>.
@@ -257,7 +256,7 @@
 				decent amount to cost. Even if the aluminum used in the cans themselves are cheap, the
 				cherries need to be processed in a factory that they wouldn't have otherwise visited, which
 				adds a non-insignificant amount to shipping costs, especially when travelling
-				internationally. As stated, cherries are also just expensive in general.
+				internationally. As stated, cherries are also just expensive.
 			</p>
 		</div>
 		<div class="mx-6 my-8">
@@ -268,7 +267,7 @@
 		</div>
 		<div class="mx-6 my-8">
 			<p class="py-3 font-proximaNova text-lg">
-				Comparing to fresh fruit again, flipping back and forth shows that cherries are expensive no
+				Comparing to fresh fruit again, flipping back-and-forth shows that cherries are expensive no
 				matter the form. Switching to fresh only subtracts $0.58 from the final cost. The other
 				fruits are far more interesting, however.
 			</p>
@@ -279,10 +278,10 @@
 			</p>
 			<p class="py-3 font-proximaNova text-lg">
 				This is particularly relevant when talking about apricots, which sell at $3.62/lb when
-				fresh, and drop all the way down to $2.24 when canned. That is a $1.38 difference! This goes
-				against conventional wisdom in that you pay a premium for canned goods and their shelf
-				stability. While not as extreme, peaches follow this trend too, falling $0.17 under the cost
-				of buying fresh.
+				fresh, and drop down to $2.24 when canned. That is a $1.38 difference! This goes against
+				conventional wisdom in that you pay a premium for canned goods and their shelf stability.
+				While not as extreme, peaches follow this trend too, falling $0.17 under the cost of buying
+				fresh.
 			</p>
 			<p class="py-3 font-proximaNova text-lg">
 				So why is this? The best explanation can be found by observing their peak season. Peaches
@@ -329,7 +328,7 @@
 				Dried fruits are more expensive on average than any other type of fruit for one simple
 				reason. Volume. The majority of what gives fruits their shape is water. It's why grapes
 				explode in your mouth and why watermelon tastes so crunchy. Water is a large part of what
-				make fruits work, along with the natural sugars (fructose and glucose), of course.
+				makes fruits work, along with the natural sugars (fructose and glucose), of course.
 			</p>
 			<p class="py-3 font-proximaNova text-lg">
 				Having little to no water means that you can pack far more of a given fruit in the same
@@ -337,7 +336,7 @@
 				one with fresh cherries, for example.<Link
 					href="https://kingorchards.com/product/1-lb-unsweetened-dried-cherries/"
 					><sup>5</sup></Link
-				> It's important to note raisins as an important outlier here though. When considering their
+				> It's important to note raisins as an important outlier here, though. When considering their
 				significant shrink in volume, they are really not that much more expensive than raw grapes ($3.99/lb).
 				This is often due to raisins being made from lower quality "Thompson" grapes.<Link
 					href="https://www.sandiegoreader.com/news/2012/aug/22/straight-cost-grapes-raisins/"
@@ -364,7 +363,7 @@
 			<p class="py-3 font-proximaNova text-lg">
 				Any kind of advantage that dried fruit would have had due to shelf-stability is completely
 				lost in the volume argument. That doesn't make dried fruit <i>bad</i>, though. Just
-				different. You will likely end up paying more upfront, but you will recieve more in caloric
+				different. You will likely end up paying more upfront, but you will receive more in caloric
 				intake for that money.
 			</p>
 		</div>
