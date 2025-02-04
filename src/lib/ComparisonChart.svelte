@@ -361,7 +361,7 @@
 	{#if forms.length > 1}
 		<button
 			class="text-md absolute right-6 top-4 z-0 border border-[#000] bg-white px-4 py-2 font-proximaNova text-lg font-bold shadow-[4px_4px_0px_#000] hover:bg-gray-100"
-			on:click={cycleForm}
+			onclick={cycleForm}
 		>
 			{activeForm}
 		</button>
@@ -376,19 +376,5 @@
 		max-width: 1200px;
 		height: auto;
 		min-height: 100px;
-	}
-
-	.form-buttons-container {
-		position: relative;
-		margin-top: 2rem;
-	}
-
-	.form-buttons {
-		position: absolute;
-		right: 1rem;
-		top: -1.5rem;
-		display: flex;
-		flex-direction: column;
-		gap: 1rem;
 	}
 </style>

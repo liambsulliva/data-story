@@ -103,6 +103,7 @@
 <div class="collage-container" on:touchmove|preventDefault>
 	<div
 		class="svg-container"
+		role="img"
 		style="
 		  transform: translate({$pos1.x}px, {$pos1.y}px);
 		  width: {size}px;
@@ -119,6 +120,7 @@
 
 	<div
 		class="svg-container"
+		role="img"
 		style="
 		  transform: translate({$pos2.x}px, {$pos2.y}px);
 		  width: {size}px;
@@ -135,6 +137,7 @@
 
 	<div
 		class="svg-container"
+		role="img"
 		style="
 		  transform: translate({$pos3.x}px, {$pos3.y}px);
 		  width: {size}px;
