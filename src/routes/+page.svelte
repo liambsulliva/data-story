@@ -156,7 +156,7 @@
 			<div class="relative">
 				<BarChart form={'Fresh'} fruits={['Mangoes', 'Bananas', 'Pineapple', 'Watermelon']} />
 				<div
-					class="text-md -top-2.5 right-20 z-10 w-full border border-[#000] bg-white px-4 py-2 font-proximaNova text-lg shadow-[4px_4px_0px_#000] lg:absolute lg:w-96"
+					class="-top-2.5 right-20 z-10 w-full border border-[#000] bg-white px-4 py-2 font-proximaNova text-lg shadow-[4px_4px_0px_#000] lg:absolute lg:w-96"
 				>
 					<h3 class="font-proximaNova text-2xl font-bold">An aside...</h3>
 					<p class="font-proximaNova text-lg">
@@ -370,10 +370,10 @@
 	</section>
 	<section class="mt-36 lg:mx-8">
 		<div class="relative mx-6 mb-12 inline-flex items-center">
-			<h2 class="mr-2 text-center font-freightText text-5xl font-bold">Juice</h2>
+			<h2 class="mr-2 text-center font-freightText text-5xl font-bold">And... Juice?</h2>
 			<img src="/Lemons.svg" alt="Lemons" />
-			<div class="absolute bottom-0 left-0 right-0">
-				<img src="/header-scribble.svg" alt="Underline" class="w-32" />
+			<div class="absolute -bottom-4 -left-1 right-0">
+				<img src="/header-scribble.svg" alt="Underline" class="w-64" />
 			</div>
 		</div>
 		<div class="mx-6">
@@ -393,8 +393,22 @@
 			<p class="py-3 font-proximaNova"></p>
 		</div>
 	</section>
+	<section class="relative">
+		<div class="flex w-full flex-col justify-start">
+			<div class="relative w-full">
+				<h1 class="mx-14 my-24 text-left font-freightText text-5xl font-bold max-md:mx-6">
+					In Conclusion...
+				</h1>
+				<div class="absolute bottom-[5rem] left-9 right-9 h-[2px] bg-black"></div>
+				<div class="absolute bottom-[4.75rem] left-9 right-9 h-[2px] bg-black"></div>
+			</div>
+			<div class="mx-14 mb-24">
+				<p class="py-3 font-proximaNova text-lg">Lorem ipsum dolor sit amet...</p>
+			</div>
+		</div>
+	</section>
 </main>
-<footer class="m-4 font-proximaNova">
+<footer class="m-6 font-proximaNova">
 	<div class="flex justify-between">
 		<p class="font-proximaNova text-lg">
 			Made with ❤️ by <Link href="https://liambsullivan.com">Liam Sullivan</Link>

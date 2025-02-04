@@ -11,12 +11,14 @@ This static website provides an engaging exploration of fruit prices, utilizing 
 
 ## Getting Started
 
-To get a local copy up and running, follow these steps:
+The easiest way to see the project is to check out the live link at https://dnid-data-story.vercel.app
+
+But if you want to be crafty and run it locally, follow these steps:
 
 1. **Clone the repository**:
 
    ```bash
-   git clone https://github.com/yourusername/dnid-data-story.git
+   git clone https://github.com/liambsulliva/dnid-data-story.git
    cd dnid-data-story
    ```
 
