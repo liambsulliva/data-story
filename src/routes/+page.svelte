@@ -387,7 +387,7 @@
 				It might seem silly to place <i>Juice</i> on the same playing field as fresh, frozen, or
 				canned options (despite <Link href="https://www.myplate.gov/eat-healthy/fruits"
 					>MyPlate</Link
-				> pushing it since 2011). In some ways it is. Nutritionally, fruit juices bypass the stomach's
+				> pushing it since 2011). In some ways, it is. Nutritionally, fruit juices bypass the stomach's
 				digestion of the fiber present in whole fruits that support your gut microbiome.<Link
 					href="https://www.houstonmethodist.org/blog/articles/2022/sep/7-benefits-of-fiber-that-should-convince-you-to-eat-enough-of-it/"
 					><sup>7</sup></Link
@@ -403,7 +403,7 @@
 					href="https://www.ers.usda.gov/data-products/fruit-and-vegetable-prices"
 					><sup>8</sup></Link
 				> The inconvenience of needing to ship the entire fruit only for the seeds to be thrown out before
-				it is processed in a juicer is a waste of space and weight that could have gone to another fruit
+				being processed in a juicer is a waste of space and weight that could have gone to another fruit
 				instead. Additionally, the fruit is quite difficult to cut, so very often humans have to prepare
 				the fruits for processing by hand. It's a very expensive process, and those costs are handed
 				off to the consumer.
@@ -452,27 +452,26 @@
 				/>
 				<p class="mt-8 py-3 font-proximaNova text-lg">
 					Fruits have a lot more character than meets the eye. The way they are bought, sold, and
-					moved around is directly linked to the each fruit's distinct set of quirks. There is
-					always a reason why a particular fruit is priced the way it is. Oftentimes it comes down
-					to how much manpower (or lack thereof) is required to get it from the plant to your
-					grocery store.
+					moved around is directly linked to each fruit's distinct set of quirks. There is always a
+					reason a particular fruit is priced the way it is. Oftentimes it comes down to how much
+					manpower (or lack thereof) is required to get it from the plant to your grocery store.
 				</p>
 				<p class="py-3 font-proximaNova text-lg">
-					I leaned on exclusively bar graphs for this story because they are exceptionally good at
+					I exclusively leaned on bar graphs for this story because they are exceptionally good at
 					showing off comparisons. I was initially planning on using a line graph to show the
 					differences in pricing over time, playing off of the <Link
 						href="https://www.cnbc.com/2022/07/13/inflation-rose-9point1percent-in-june-even-more-than-expected-as-price-pressures-intensify.html"
 						>COVID-era inflationary spike</Link
-					>. Unforunately, the data I needed didn't offer the granularity I was looking for, and I
+					>. Unfortunately, the data I needed didn't offer the granularity I was looking for, so I
 					decided to keep things simple instead.
 				</p>
 				<p class="py-3 font-proximaNova text-lg">
-					If I were to expand upon this project in the future, I would include animations to
-					visually grow and shrink the bars when the button to change the form of fruit was clicked.
-					I would also include range sliders on the pricing axis, so viewers can zoom in on minute
-					differences between bars. This would have helped in the <i>Canned</i> and <i>Juice</i> sections,
-					since it is quite difficult to tell the difference between the bottom 4 bars unless you rely
-					heavily on the hover/tap tooltip.
+					If I were to expand upon this project in the future, I would include animations to grow
+					and shrink the bars when the button to change the form of fruit was clicked. I would also
+					include range sliders on the pricing axis, so viewers can zoom in on minute differences
+					between bars. This would have helped in the <i>Canned</i> and <i>Juice</i> sections, since
+					it is quite difficult to tell the difference between the bottom 4 bars unless you rely heavily
+					on the hover/tap tooltip.
 				</p>
 				<p class="py-3 font-proximaNova text-lg">
 					Design wise, I would also include illustrations on top of each bar. It would give each
