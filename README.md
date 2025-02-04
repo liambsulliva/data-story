@@ -13,7 +13,7 @@ This static website provides an engaging exploration of fruit prices, utilizing 
 
 The easiest way to see the project is to check out the live link at https://dnid-data-story.vercel.app
 
-But if you want to be crafty and run it locally, follow these steps:
+But if you want to be crafty and build it locally, follow these steps:
 
 1. **Clone the repository**:
 
