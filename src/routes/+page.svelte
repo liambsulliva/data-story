@@ -45,7 +45,7 @@
 						carbohydrates like corn and wheat are grown domestically in the United States. <Link
 							href="https://en.wikipedia.org/wiki/Corn_syrup">Corn syrup</Link
 						> is used in so many processed foods because of how cheap it is to manufacture. It doesn't
-						require any sort of foreign imports to make while being irresistably delicious. The domestic
+						require any sort of foreign imports to make, while being irresistably delicious. The domestic
 						availability factor is the reason we consistently reach out to the corn substance and not,
 						say, agave syrup.
 					</p>
@@ -154,15 +154,30 @@
 					growing season, which helps to extend their supply window.
 				</p>
 			</div>
-			<BarChart form={'Fresh'} fruits={['Mangoes', 'Bananas', 'Pineapple', 'Watermelon']} />
+			<div class="relative">
+				<BarChart form={'Fresh'} fruits={['Mangoes', 'Bananas', 'Pineapple', 'Watermelon']} />
+				<div
+					class="text-md -top-2.5 right-20 z-10 w-full border border-[#000] bg-white px-4 py-2 font-proximaNova text-lg shadow-[4px_4px_0px_#000] lg:absolute lg:w-96"
+				>
+					<h3 class="font-proximaNova text-2xl font-bold">An aside...</h3>
+					<p class="font-proximaNova text-lg">
+						The abundance and affordability of tropical fruits is deeply tied to caribbean slave
+						labor dating back to the late 1800s. You can read more about it <Link
+							href="https://www.thecollector.com/how-tropical-fruits-became-commonplace-usa/"
+							>here</Link
+						>.
+					</p>
+				</div>
+			</div>
+
 			<div class="my-8">
 				<p class="py-3 font-proximaNova text-lg">
 					Narrowing in on the tropical fruits reveals that mangoes ($1.47/lb) are easily the most
-					expensive, easily doubling the price of pineapples ($0.62/lb) and bananas ($0.60/lb).
-					Considering that they all grow in similar climates, this doesn't make much sense at first.
-					However, mangoes are heavier than bananas without having the rugged exterior that
-					pineapples and watermelons do. They need to be specially packaged to ensure that they both
-					won't smash other fruits and won't get smashed themselves.
+					expensive of the bunch, easily doubling the price of pineapples ($0.62/lb) and bananas
+					($0.60/lb). Considering that they all grow in similar climates, this doesn't make much
+					sense at first. However, mangoes are heavier than bananas without having the rugged
+					exterior that pineapples and watermelons do. They need to be specially packaged to ensure
+					that they both won't smash other fruits and won't get smashed themselves.
 				</p>
 				<p class="py-3 font-proximaNova text-lg">
 					But watermelons ($0.38/lb) are incredibly heavy, right? So why would they be the cheapest
@@ -234,19 +249,15 @@
 			</div>
 		</div>
 		<div class="mx-6 my-8">
-			<BarChart
-				form={'Canned'}
-				fruits={['Apricots', 'Cherries', 'Peaches', 'Pears', 'Pineapple']}
-			/>
-		</div>
-		<div class="mx-6 my-8">
 			<p class="mt-8 py-3 font-proximaNova text-lg">
 				Cherries immediately jump out as an outlier here. Most of the fruits average around $2/lb,
 				but cherries sit at a staggering $5.24/lb. This is for a few reasons. For one, the other
-				fruits are significantly larger than cherries, and thus distributors can fill a storage
-				pallet with less of those other fruits and make more per sale. Also, cherries lose a lot of
-				their volume when dried out, meaning that more cherries need to be packed into a single
-				container.
+				fruits are significantly larger than cherries, and thus distributors need to fill a single
+				can with way more cherries for a can of the same volume. Also, the canning process can add a
+				decent amount to cost. Even if the aluminum used in the cans themselves are cheap, the
+				cherries need to be processed in a factory that they wouldn't have otherwise visited, which
+				adds a non-insignificant amount to shipping costs, especially when travelling
+				internationally. As stated, cherries are also just expensive in general.
 			</p>
 		</div>
 		<div class="mx-6 my-8">
@@ -254,8 +265,42 @@
 				forms={['Canned', 'Fresh']}
 				fruits={['Apricots', 'Cherries', 'Peaches', 'Pears', 'Pineapple']}
 			/>
-			<p class="py-3 font-proximaNova text-lg"></p>
-			<p class="py-3 font-proximaNova text-lg"></p>
+		</div>
+		<div class="mx-6 my-8">
+			<p class="py-3 font-proximaNova text-lg">
+				Comparing to fresh fruit again, flipping back and forth shows that cherries are expensive no
+				matter the form. Switching to fresh only subtracts $0.58 from the final cost. The other
+				fruits are far more interesting, however.
+			</p>
+			<p class="py-3 font-proximaNova text-lg">
+				It's important to mention that while the canning process can be pricey and time-consuming,
+				the resulting product is shelf stable, unlike fresh fruit. This gives canned fruits a
+				distinct advantage in the supply chain.
+			</p>
+			<p class="py-3 font-proximaNova text-lg">
+				This is particularly relevant when talking about apricots, which sell at $3.62/lb when
+				fresh, and drop all the way down to $2.24 when canned. That is a $1.38 difference! This goes
+				against conventional wisdom in that you pay a premium for canned goods and their shelf
+				stability. While not as extreme, peaches follow this trend too, falling $0.17 under the cost
+				of buying fresh.
+			</p>
+			<p class="py-3 font-proximaNova text-lg">
+				So why is this? The best explanation can be found by observing their peak season. Peaches
+				and apricots are both at their peak harvest during the summer months. Apricots specifically
+				tend to grow erratically, having a tiny window in which they are ripe and ready to eat.<Link
+					href="https://www.washingtonpost.com/archive/lifestyle/wellness/1996/08/06/the-tasty-apricot-is-a-misunderstood-fruit/b47d4e49-44b7-449e-a5e7-09f62882bf69/"
+					><sup>4</sup></Link
+				> Distributors trying to sell fresh apricots need to time their shipping to ensure that the apricot
+				gets in the hands of the consumer with at least a day or two's worth of a grace period before
+				ripeness. Even if everything goes perfectly, grocery stores can't cycle out apricots daily, and
+				some apricots may sit on the shelf longer than others.
+			</p>
+			<p class="py-3 font-proximaNova text-lg">
+				If distributors can the fruits themselves, however, they are able to capture the fruit in
+				its peak ripeness and keep it from developing any further. This gives suppliers much more
+				control over how the consumer will enjoy the product instead of passing the fresh fruit over
+				to a grocer and hoping for the best.
+			</p>
 		</div>
 	</section>
 	<section class="mt-36 lg:mx-8">
@@ -270,20 +315,58 @@
 			<BarChart
 				form={'Dried'}
 				fruits={[
-					'Mangoes',
 					'Pineapple',
 					'Dates',
 					'Figs',
 					'Cranberries',
 					'Apricots',
-					'Grapes (raisins)',
+					'Grapes',
 					'Plum (prunes)',
 					'Papaya'
 				]}
 			/>
-			<p class="mt-8 py-3 font-proximaNova text-lg"></p>
-			<p class="py-3 font-proximaNova text-lg"></p>
-			<p class="py-3 font-proximaNova"></p>
+			<p class="mt-8 py-3 font-proximaNova text-lg">
+				Dried fruits are more expensive on average than any other type of fruit for one simple
+				reason. Volume. The majority of what gives fruits their shape is water. It's why grapes
+				explode in your mouth and why watermelon tastes so crunchy. Water is a large part of what
+				make fruits work, along with the natural sugars (fructose and glucose), of course.
+			</p>
+			<p class="py-3 font-proximaNova text-lg">
+				Having little to no water means that you can pack far more of a given fruit in the same
+				container. You can easily put double the number of dried cherries in the same container as
+				one with fresh cherries, for example.<Link
+					href="https://kingorchards.com/product/1-lb-unsweetened-dried-cherries/"
+					><sup>5</sup></Link
+				> It's important to note raisins as an important outlier here though. When considering their
+				significant shrink in volume, they are really not that much more expensive than raw grapes ($3.99/lb).
+				This is often due to raisins being made from lower quality "Thompson" grapes.<Link
+					href="https://www.sandiegoreader.com/news/2012/aug/22/straight-cost-grapes-raisins/"
+					><sup>6</sup></Link
+				>
+			</p>
+			<ComparisonChart
+				forms={['Fresh', 'Canned']}
+				fruits={[
+					'Pineapple',
+					'Dates',
+					'Figs',
+					'Cranberries',
+					'Apricots',
+					'Grapes',
+					'Plum',
+					'Papaya'
+				]}
+			/>
+			<p class="py-3 font-proximaNova text-lg">
+				As a refresher, here they are compared to their fresh and canned forms. Even by looking at
+				the y-axis ticks alone, it's clear that
+			</p>
+			<p class="py-3 font-proximaNova text-lg">
+				Any kind of advantage that dried fruit would have had due to shelf-stability is completely
+				lost in the volume argument. That doesn't make dried fruit <i>bad</i>, though. Just
+				different. You will likely end up paying more upfront, but you will recieve more in caloric
+				intake for that money.
+			</p>
 		</div>
 	</section>
 	<section class="mt-36 lg:mx-8">
@@ -313,5 +396,14 @@
 	</section>
 </main>
 <footer class="m-4 font-proximaNova">
-	<p>Made with ❤️ by <Link href="https://liambsullivan.com">Liam Sullivan</Link></p>
+	<div class="flex justify-between">
+		<p class="font-proximaNova text-lg">
+			Made with ❤️ by <Link href="https://liambsullivan.com">Liam Sullivan</Link>
+		</p>
+		<p class="font-proximaNova text-lg">
+			Sourced from <Link href="https://www.ers.usda.gov/data-products/fruit-and-vegetable-prices">
+				The US Department of Agriculture</Link
+			>
+		</p>
+	</div>
 </footer>
