@@ -31,13 +31,6 @@
 		return d3.csvParse(text) as unknown as FruitData[];
 	};
 
-	// Helper function to get the first part of the fruit name (before comma) OR the alternate name in (parens)
-	const getFruitDisplayName = (fruit: string) => {
-		const primaryName = fruit.split(',')[0].trim();
-		const match = primaryName.match(/\(([^)]+)\)/);
-		return match ? match[1].charAt(0).toUpperCase() + match[1].slice(1) : primaryName;
-	};
-
 	const createChart = async () => {
 		d3.select(chartContainer).selectAll('*').remove();
 
@@ -105,13 +98,13 @@
 
 			y = d3
 				.scaleBand()
-				.domain(filteredData.map((d) => getFruitDisplayName(d.Fruit)))
+				.domain(filteredData.map((d) => d.Fruit))
 				.range([height, 0])
 				.padding(barSpacing / (barHeight + barSpacing));
 		} else {
 			x = d3
 				.scaleBand()
-				.domain(filteredData.map((d) => getFruitDisplayName(d.Fruit)))
+				.domain(filteredData.map((d) => d.Fruit))
 				.range([0, width])
 				.padding(containerWidth < 450 ? 0.05 : containerWidth < 800 ? 0.1 : 0.15);
 
@@ -158,12 +151,12 @@
 		if (isMobileLayout) {
 			bars
 				.attr('x', 0)
-				.attr('y', (d) => (y as d3.ScaleBand<string>)(getFruitDisplayName(d.Fruit))!)
+				.attr('y', (d) => (y as d3.ScaleBand<string>)(d.Fruit)!)
 				.attr('width', (d) => (x as d3.ScaleLinear<number, number>)(d.RetailPrice))
 				.attr('height', (y as d3.ScaleBand<string>).bandwidth());
 		} else {
 			bars
-				.attr('x', (d) => (x as d3.ScaleBand<string>)(getFruitDisplayName(d.Fruit))!)
+				.attr('x', (d) => (x as d3.ScaleBand<string>)(d.Fruit)!)
 				.attr('y', (d) => (y as d3.ScaleLinear<number, number>)(d.RetailPrice))
 				.attr('width', (x as d3.ScaleBand<string>).bandwidth())
 				.attr('height', (d) => height - (y as d3.ScaleLinear<number, number>)(d.RetailPrice));
@@ -188,7 +181,7 @@
 						.style('opacity', 1)
 						.html(
 							`
-							<div style="font-weight: bold">${getFruitDisplayName(d.Fruit)}</div>
+							<div style="font-weight: bold">${d.Fruit}</div>
 							<div>$${Number(d.RetailPrice).toFixed(2)} ${d.RetailPriceUnit}</div>
 						`
 						)
@@ -212,7 +205,7 @@
 						.style('opacity', 1)
 						.html(
 							`
-							<div style="font-weight: bold">${getFruitDisplayName(d.Fruit)}</div>
+							<div style="font-weight: bold">${d.Fruit}</div>
 							<div>$${Number(d.RetailPrice).toFixed(2)} ${d.RetailPriceUnit}</div>
 						`
 						)
@@ -355,26 +348,25 @@
 			timeout = setTimeout(later, wait);
 		};
 	}
+
+	const cycleForm = () => {
+		const currentIndex = forms.indexOf(activeForm);
+		const nextIndex = (currentIndex + 1) % forms.length;
+		activeForm = forms[nextIndex];
+		createChart();
+	};
 </script>
 
-{#if forms.length > 1}
-	<div class="form-buttons-container">
-		<div class="form-buttons">
-			{#each forms as form}
-				<button
-					class="text-md relative z-10 border border-[#000] bg-white px-4 py-2 font-proximaNova font-bold shadow-[4px_4px_0px_#000] hover:bg-gray-100"
-					class:active={activeForm === form}
-					on:click={() => {
-						activeForm = form;
-						createChart();
-					}}
-				>
-					{form}
-				</button>
-			{/each}
-		</div>
-	</div>
-{/if}
+<div class="relative">
+	{#if forms.length > 1}
+		<button
+			class="text-md absolute right-6 top-4 z-0 border border-[#000] bg-white px-4 py-2 font-proximaNova text-lg font-bold shadow-[4px_4px_0px_#000] hover:bg-gray-100"
+			on:click={cycleForm}
+		>
+			{activeForm}
+		</button>
+	{/if}
+</div>
 
 <div class="chart-container" bind:this={chartContainer}></div>
 

@@ -30,13 +30,6 @@
 		return d3.csvParse(text) as unknown as FruitData[];
 	};
 
-	// Helper function to get the first part of the fruit name (before comma) OR the alternate name in (parens)
-	const getFruitDisplayName = (fruit: string) => {
-		const primaryName = fruit.split(',')[0].trim();
-		const match = primaryName.match(/\(([^)]+)\)/);
-		return match ? match[1].charAt(0).toUpperCase() + match[1].slice(1) : primaryName;
-	};
-
 	const createChart = async () => {
 		d3.select(chartContainer).selectAll('*').remove();
 
@@ -104,13 +97,13 @@
 
 			y = d3
 				.scaleBand()
-				.domain(filteredData.map((d) => getFruitDisplayName(d.Fruit)))
+				.domain(filteredData.map((d) => d.Fruit))
 				.range([height, 0])
 				.padding(barSpacing / (barHeight + barSpacing));
 		} else {
 			x = d3
 				.scaleBand()
-				.domain(filteredData.map((d) => getFruitDisplayName(d.Fruit)))
+				.domain(filteredData.map((d) => d.Fruit))
 				.range([0, width])
 				.padding(containerWidth < 450 ? 0.05 : containerWidth < 800 ? 0.1 : 0.15);
 
@@ -157,12 +150,12 @@
 		if (isMobileLayout) {
 			bars
 				.attr('x', 0)
-				.attr('y', (d) => (y as d3.ScaleBand<string>)(getFruitDisplayName(d.Fruit))!)
+				.attr('y', (d) => (y as d3.ScaleBand<string>)(d.Fruit)!)
 				.attr('width', (d) => (x as d3.ScaleLinear<number, number>)(d.RetailPrice))
 				.attr('height', (y as d3.ScaleBand<string>).bandwidth());
 		} else {
 			bars
-				.attr('x', (d) => (x as d3.ScaleBand<string>)(getFruitDisplayName(d.Fruit))!)
+				.attr('x', (d) => (x as d3.ScaleBand<string>)(d.Fruit)!)
 				.attr('y', (d) => (y as d3.ScaleLinear<number, number>)(d.RetailPrice))
 				.attr('width', (x as d3.ScaleBand<string>).bandwidth())
 				.attr('height', (d) => height - (y as d3.ScaleLinear<number, number>)(d.RetailPrice));
@@ -187,7 +180,7 @@
 						.style('opacity', 1)
 						.html(
 							`
-							<div style="font-weight: bold">${getFruitDisplayName(d.Fruit)}</div>
+							<div style="font-weight: bold">${d.Fruit}</div>
 							<div>$${Number(d.RetailPrice).toFixed(2)} ${d.RetailPriceUnit}</div>
 						`
 						)
@@ -211,7 +204,7 @@
 						.style('opacity', 1)
 						.html(
 							`
-							<div style="font-weight: bold">${getFruitDisplayName(d.Fruit)}</div>
+							<div style="font-weight: bold">${d.Fruit}</div>
 							<div>$${Number(d.RetailPrice).toFixed(2)} ${d.RetailPriceUnit}</div>
 						`
 						)
