@@ -5,15 +5,16 @@ This static website provides an engaging exploration of fruit prices, utilizing 
 ## Features
 
 - **Responsive Design**: The website is designed to be fully responsive, ensuring that the graphs and content adjust seamlessly to different screen sizes, from mobile devices to large desktop displays.
-- **Reactive Graphs**: Interactive graphs built with D3.js that dynamically update based on the data provided, allowing users to visualize fruit prices in various forms (fresh, frozen, canned, dried, and juiced).
-- **SvelteKit Prerendering**: The site leverages SvelteKit's prerendering capabilities, loading HTML at build time. This approach enhances performance by serving pre-built pages instead of relying solely on JavaScript to render the DOM.
-- **Homey Aesthetic**: The design features a charming, hand-drawn style reminiscent of your local farmer's market, creating a warm and inviting atmosphere for users.
+- **Reactive Graphs**: Interactive graphs built with D3.js dynamically update based on the form of fruit selected, allowing users to visualize fruit prices in various forms (fresh, frozen, canned, dried, and juiced).
+- **Touch Support**: Hover effects are replaced by tap/drag effects on mobile devices so that the mobile experience is on-par with the desktop experience in terms of interactivity.
+- **SvelteKit Prerendering**: The site leverages SvelteKit's prerendering capabilities, loading HTML at build time. This approach enhances performance by serving a scaffold of the page instead of relying solely on JavaScript to render the DOM.
+- **Homey Aesthetic**: The design features a charming, hand-drawn style reminiscent of a local farmer's market, creating a warm and inviting atmosphere (I hope).
 
 ## Getting Started
 
-The easiest way to see the project is to check out the live link at https://dnid-data-story.vercel.app
+The easiest way to see the project is to check out the live deployment at https://dnid-data-story.vercel.app
 
-But if you want to be crafty and build it locally, follow these steps:
+...But if you want to be crafty and build it from source instead, follow these steps:
 
 1. **Clone the repository**:
 
