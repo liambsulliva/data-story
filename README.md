@@ -34,7 +34,7 @@ But if you want to be crafty and build it locally, follow these steps:
    npm run build
    ```
 
-4. **Navigate to the /dist directory** and deploy on a static webserver of your choice.
+4. **Navigate to the /dist directory** and deploy on a static web server of your choice.
 
 ## Built With
 

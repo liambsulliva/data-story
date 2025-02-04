@@ -370,10 +370,10 @@
 	</section>
 	<section class="mt-36 lg:mx-8">
 		<div class="relative mx-6 mb-12 inline-flex items-center">
-			<h2 class="mr-2 text-center font-freightText text-5xl font-bold">And... Juice?</h2>
+			<h2 class="mr-2 text-center font-freightText text-5xl font-bold">... Juice?</h2>
 			<img src="/Lemons.svg" alt="Lemons" />
-			<div class="absolute -bottom-4 -left-1 right-0">
-				<img src="/header-scribble.svg" alt="Underline" class="w-64" />
+			<div class="absolute bottom-0 left-1 right-0">
+				<img src="/header-scribble.svg" alt="Underline" class="w-36" />
 			</div>
 		</div>
 		<div class="mx-6">
@@ -409,14 +409,19 @@
 	</section>
 </main>
 <footer class="m-6 font-proximaNova">
-	<div class="flex justify-between">
+	<div class="flex justify-between max-md:flex-col">
 		<p class="font-proximaNova text-lg">
 			Made with ❤️ by <Link href="https://liambsullivan.com">Liam Sullivan</Link>
 		</p>
-		<p class="font-proximaNova text-lg">
+		<p class="font-proximaNova text-lg max-md:hidden">
 			Sourced from <Link href="https://www.ers.usda.gov/data-products/fruit-and-vegetable-prices">
 				The US Department of Agriculture</Link
 			>
+		</p>
+		<p class="font-proximaNova text-lg md:hidden">
+			using <Link href="https://www.ers.usda.gov/data-products/fruit-and-vegetable-prices">
+				US Dept. of Agriculture</Link
+			> datasets
 		</p>
 	</div>
 </footer>
