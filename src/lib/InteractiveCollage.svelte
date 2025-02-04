@@ -163,7 +163,7 @@
 
 	.svg-container {
 		position: absolute;
-		cursor: default;
+		cursor: pointer;
 		touch-action: none;
 	}
 

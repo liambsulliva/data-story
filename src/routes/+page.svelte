@@ -100,11 +100,11 @@
 					'Bananas',
 					'Blueberries',
 					'Blackberries',
-					'Cantaloupe',
 					'Cherries',
 					'Grapes',
 					'Kiwi',
 					'Mangoes',
+					'Nectarines',
 					'Pears',
 					'Pineapple',
 					'Plum',
@@ -236,14 +236,7 @@
 		<div class="mx-6 my-8">
 			<BarChart
 				form={'Canned'}
-				fruits={[
-					'Apples, applesauce',
-					'Apricots, packed in syrup or water',
-					'Cherries, packed in syrup or water',
-					'Peaches, packed in syrup or water',
-					'Pears, packed in syrup or water',
-					'Pineapple, packed in syrup or water'
-				]}
+				fruits={['Apricots', 'Cherries', 'Peaches', 'Pears', 'Pineapple']}
 			/>
 		</div>
 		<div class="mx-6 my-8">
@@ -259,14 +252,7 @@
 		<div class="mx-6 my-8">
 			<ComparisonChart
 				forms={['Canned', 'Fresh']}
-				fruits={[
-					'Apples, applesauce',
-					'Apricots, packed in syrup or water',
-					'Cherries, packed in syrup or water',
-					'Peaches, packed in syrup or water',
-					'Pears, packed in syrup or water',
-					'Pineapple, packed in syrup or water'
-				]}
+				fruits={['Apricots', 'Cherries', 'Peaches', 'Pears', 'Pineapple']}
 			/>
 			<p class="py-3 font-proximaNova text-lg"></p>
 			<p class="py-3 font-proximaNova text-lg"></p>
