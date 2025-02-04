@@ -28,13 +28,13 @@ But if you want to be crafty and build it locally, follow these steps:
    npm install
    ```
 
-3. **Run the development server**:
+3. **Run the build step**:
 
    ```bash
-   npm run dev
+   npm run build
    ```
 
-4. **Open your browser** and navigate to `http://localhost:3000` to see the project in action.
+4. **Navigate to the /dist directory** and deploy on a static webserver of your choice.
 
 ## Built With
 
